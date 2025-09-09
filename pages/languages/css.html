@@ -1,0 +1,57 @@
+<h2 class="mb-3">CSS</h2>
+<p class="text-muted">Style and layout: selectors, cascade, layout systems, responsive design, and animations.</p>
+<div class="row">
+  <div class="col-12 d-lg-none">
+    <button class="btn btn-outline-secondary topics-toggle" type="button" onclick="toggleTopics('lang-css')">Topics</button>
+  </div>
+  <aside class="col-md-3 topics-sidebar-collapsible">
+    <div class="list-group sticky-sidebar" id="lang-css-topics">
+      <button class="list-group-item list-group-item-action active" onclick="showLanguageTopic('lang-css', 0)">Basics</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-css', 1)">Selectors & Specificity</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-css', 2)">Box Model</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-css', 3)">Flexbox</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-css', 4)">Grid</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-css', 5)">Responsive</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-css', 6)">Animations</button>
+    </div>
+  </aside>
+  <div class="col-md-9">
+    <div class="language-topic active" data-index="0">
+      <h4>Basics</h4>
+      <p>How styles cascade and inherit. Reset/normalize and author vs user agent styles.</p>
+    </div>
+    <div class="language-topic" data-index="1">
+      <h4>Selectors & Specificity</h4>
+      <p>Type, class, ID, attribute and pseudo selectors. Specificity strategy, avoid !important.</p>
+    </div>
+    <div class="language-topic" data-index="2">
+      <h4>Box Model</h4>
+      <p>Content, padding, border, margin, and <code>box-sizing</code>.</p>
+    </div>
+    <div class="language-topic" data-index="3">
+      <h4>Flexbox</h4>
+      <p>1D layout, alignment and spacing patterns.</p>
+    </div>
+    <div class="language-topic" data-index="4">
+      <h4>Grid</h4>
+      <p>2D layout, tracks, areas, and responsive grids.</p>
+    </div>
+    <div class="language-topic" data-index="5">
+      <h4>Responsive</h4>
+      <p>Media queries, fluid units, container queries, mobile-first.</p>
+    </div>
+    <div class="language-topic" data-index="6">
+      <h4>Animations</h4>
+      <p>Transitions, transforms, and keyframes for interactive UI.</p>
+    </div>
+    <div class="d-flex justify-content-between mt-3">
+      <button class="btn btn-secondary" onclick="prevLanguageTopic('lang-css')">Previous</button>
+      <button class="btn btn-primary" onclick="nextLanguageTopic('lang-css')">Next</button>
+    </div>
+    <div class="mt-3 d-flex gap-2 flex-wrap">
+      <button class="btn btn-link" onclick="showPage('languages')">Back to Languages</button>
+      <a class="btn btn-outline-success" href="https://www.w3schools.com/css/" target="_blank" rel="noopener">W3Schools</a>
+    </div>
+  </div>
+</div>
+

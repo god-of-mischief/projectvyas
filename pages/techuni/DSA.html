@@ -1,0 +1,72 @@
+<h2 class="mb-3">DSA</h2>
+<div class="row">
+    <div class="col-12 d-lg-none">
+        <button class="btn btn-outline-secondary topics-toggle" type="button" onclick="toggleTopics('tech-DSA')">Topics</button>
+    </div>
+    <aside class="col-md-3 topics-sidebar-collapsible">
+        <div class="list-group sticky-sidebar" id="tech-DSA-topics">
+            <button class="list-group-item list-group-item-action active" onclick="showLanguageTopic('tech-DSA', 0)">Basics</button>
+            <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('tech-DSA', 1)">DOM</button>
+            <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('tech-DSA', 2)">Events</button>
+            <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('tech-DSA', 3)">Async & Fetch</button>
+            <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('tech-DSA', 4)">Modules</button>
+        </div>
+    </aside>
+    <div class="col-md-9"> 
+        <div class="language-topic active" data-index="0">
+            <h4>Basics</h4><br>
+            <h5>DSA(Data Structure and Algorithms)</h5>
+            <p>DSA is a fundamental part of Computer Science that teaches you how to think and solve complex problems systematically. Using the 
+                right Data Structure and Algorithm can make your code efficient and scalable. It is essential for technical interviews and 
+                real-world applications.
+            </p>
+
+            <h5>Pre-requisites</h5>
+            <p>DSA is not specific to any programming language. But, you must have the basic understanding of any of the following programming 
+                languages:
+            </p>
+            <ul>
+                <li><a href="#" data-bs-dismiss="offcanvas" onclick="showPage('lang-C')">C</a></li>
+                <li><a href="#" data-bs-dismiss="offcanvas" onclick="showPage('lang-Cplusplus')">C++</a></li>
+                <li><a href="#" data-bs-dismiss="offcanvas" onclick="showPage('lang-java')">Java</a></li>
+                <li><a href="#" data-bs-dismiss="offcanvas" onclick="showPage('lang-python')">Python</a></li>
+                <li><a href="#" data-bs-dismiss="offcanvas" onclick="showPage('lang-js')">JavaScript</a></li>
+            </ul>
+            <p>Having a good grasp of programming fundamentals like variables, loops, conditionals, functions, and object-oriented programming 
+                will help you learn DSA more effectively.
+            </p>
+
+            <h5>Intro</h5>
+            <p>Data Structures are ways to organize and store data in a computer so that it can be accessed and modified efficiently. Algorithms 
+                are step-by-step procedures or formulas for solving problems. Together, they form the backbone of efficient programming and 
+                problem-solving. Learning DSA helps you write better code, optimize performance, and prepare for technical interviews. 
+                It also enhances your problem-solving skills, making you a more effective developer.
+            </p>
+            
+        </div>
+    <div class="language-topic" data-index="1">
+      <h4>DOM</h4>
+      <p>Selecting and manipulating elements, traversal, and styling.</p>
+    </div>
+    <div class="language-topic" data-index="2">
+      <h4>Events</h4>
+      <p>Event listeners, propagation, delegation, and common patterns.</p>
+    </div>
+    <div class="language-topic" data-index="3">
+      <h4>Async & Fetch</h4>
+      <p>Promises, async/await, error handling, and calling APIs.</p>
+    </div>
+    <div class="language-topic" data-index="4">
+      <h4>Modules</h4>
+      <p>ES modules, bundlers, and project structure for maintainability.</p>
+    </div>
+    <div class="d-flex justify-content-between mt-3">
+      <button class="btn btn-secondary" onclick="prevLanguageTopic('tech-DSA')">Previous</button>
+      <button class="btn btn-primary" onclick="nextLanguageTopic('tech-DSA')">Next</button>
+    </div>
+    <div class="mt-3 d-flex gap-2 flex-wrap">
+      <button class="btn btn-link" onclick="showPage('techuni')">Back to TheTechStackUniverse</button>
+    </div>
+  </div>
+</div>
+

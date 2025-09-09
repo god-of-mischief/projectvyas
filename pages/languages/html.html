@@ -1,0 +1,78 @@
+<h2 class="mb-3">HTML</h2>
+<p class="text-muted">Structure of web pages: elements, attributes, forms, media, semantics, and accessibility.</p>
+<div class="row">
+  <div class="col-12 d-lg-none">
+    <button class="btn btn-outline-secondary topics-toggle" type="button" onclick="toggleTopics('lang-html')">Topics</button>
+  </div>
+  <aside class="col-md-3 topics-sidebar-collapsible">
+    <div class="list-group sticky-sidebar" id="lang-html-topics">
+      <button class="list-group-item list-group-item-action active" onclick="showLanguageTopic('lang-html', 0)">Introduction</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-html', 1)">Elements</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-html', 2)">Attributes</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-html', 3)">Text & Headings</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-html', 4)">Links & Images</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-html', 5)">Lists & Tables</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-html', 6)">Forms</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-html', 7)">Semantic HTML</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-html', 8)">Media</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-html', 9)">Accessibility</button>
+    </div>
+  </aside>
+  <div class="col-md-9">
+    <div class="language-topic active" data-index="0">
+      <h4>Introduction</h4>
+      <p>HTML provides the structure of web pages using elements (tags). Learn the document skeleton and basic tags.</p>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt; &lt;meta charset="utf-8"&gt; &lt;title&gt;Title&lt;/title&gt; &lt;/head&gt;
+  &lt;body&gt; Hello world! &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+    <div class="language-topic" data-index="1">
+      <h4>Elements</h4>
+      <p>Elements define meaning and structure. Most elements wrap content with opening/closing tags; some are void (e.g., <code>&lt;img&gt;</code>).</p>
+    </div>
+    <div class="language-topic" data-index="2">
+      <h4>Attributes</h4>
+      <p>Attributes add metadata such as <code>id</code>, <code>class</code>, <code>src</code>, and <code>alt</code>. Example: <code>&lt;img src="photo.jpg" alt="Description"&gt;</code>.</p>
+    </div>
+    <div class="language-topic" data-index="3">
+      <h4>Text & Headings</h4>
+      <p>Use <code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code> for headings and <code>&lt;p&gt;</code> for paragraphs. Headings form a logical outline.</p>
+    </div>
+    <div class="language-topic" data-index="4">
+      <h4>Links & Images</h4>
+      <p>Create links with <code>&lt;a href="..."&gt;</code> and images with <code>&lt;img src="..." alt="..."&gt;</code>. Include descriptive <code>alt</code> text.</p>
+    </div>
+    <div class="language-topic" data-index="5">
+      <h4>Lists & Tables</h4>
+      <p>Use <code>&lt;ul&gt;</code>/<code>&lt;ol&gt;</code> for lists and <code>&lt;table&gt;</code> with <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code> for tabular data.</p>
+    </div>
+    <div class="language-topic" data-index="6">
+      <h4>Forms</h4>
+      <p>Build forms with <code>&lt;form&gt;</code>, <code>&lt;label&gt;</code>, and controls like <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;textarea&gt;</code>. Connect labels via <code>for</code>/<code>id</code>.</p>
+    </div>
+    <div class="language-topic" data-index="7">
+      <h4>Semantic HTML</h4>
+      <p>Use <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;footer&gt;</code> for better accessibility and SEO.</p>
+    </div>
+    <div class="language-topic" data-index="8">
+      <h4>Media</h4>
+      <p>Embed images, audio, and video with captions/tracks where appropriate. Provide fallbacks.</p>
+    </div>
+    <div class="language-topic" data-index="9">
+      <h4>Accessibility</h4>
+      <p>Ensure keyboard support, proper landmarks, labels, and color contrast. Use ARIA as a complement to semantics.</p>
+    </div>
+    <div class="d-flex justify-content-between mt-3">
+      <button class="btn btn-secondary" onclick="prevLanguageTopic('lang-html')">Previous</button>
+      <button class="btn btn-primary" onclick="nextLanguageTopic('lang-html')">Next</button>
+    </div>
+    <div class="mt-3 d-flex gap-2 flex-wrap">
+      <button class="btn btn-link" onclick="showPage('languages')">Back to Languages</button>
+      <a class="btn btn-outline-info" href="https://www.theodinproject.com/paths/foundations/courses/foundations" target="_blank" rel="noopener">Odin Project</a>
+      <a class="btn btn-outline-success" href="https://www.w3schools.com/html/" target="_blank" rel="noopener">W3Schools</a>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,51 @@
+<h2 class="mb-3">Interview Series</h2>
+<div class="row">
+  <div class="col-12 d-lg-none">
+    <button class="btn btn-outline-secondary topics-toggle" type="button" onclick="toggleTopics('tech-interview')">Topics</button>
+  </div>
+  <aside class="col-md-3 topics-sidebar-collapsible">
+    <div class="list-group sticky-sidebar" id="tech-interview-topics">
+      <button class="list-group-item list-group-item-action active" onclick="showLanguageTopic('tech-interview', 0)">Basics</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('tech-interview', 1)">DOM</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('tech-interview', 2)">Events</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('tech-interview', 3)">Async & Fetch</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('tech-interview', 4)">Modules</button>
+    </div>
+  </aside>
+  <div class="col-md-9">
+    <div class="language-topic active" data-index="0">
+      <h4>Basics</h4><br>
+
+      <h5>What is JavaScript?</h5>
+      <p>JavaScript is a scripting language you can use to make web pages interactive. JavaScript is one of the <b>3 languages</b> of the web 
+        everyone must learn along with <b><a href="#" data-bs-dismiss="offcanvas" onclick="showPage('lang-html')">HTML</a> and <a href="#" 
+        data-bs-dismiss="offcanvas" onclick="showPage('lang-css')">CSS</a></b>.</p>
+      
+
+    </div>
+    <div class="language-topic" data-index="1">
+      <h4>DOM</h4>
+      <p>Selecting and manipulating elements, traversal, and styling.</p>
+    </div>
+    <div class="language-topic" data-index="2">
+      <h4>Events</h4>
+      <p>Event listeners, propagation, delegation, and common patterns.</p>
+    </div>
+    <div class="language-topic" data-index="3">
+      <h4>Async & Fetch</h4>
+      <p>Promises, async/await, error handling, and calling APIs.</p>
+    </div>
+    <div class="language-topic" data-index="4">
+      <h4>Modules</h4>
+      <p>ES modules, bundlers, and project structure for maintainability.</p>
+    </div>
+    <div class="d-flex justify-content-between mt-3">
+      <button class="btn btn-secondary" onclick="prevLanguageTopic('tech-interview')">Previous</button>
+      <button class="btn btn-primary" onclick="nextLanguageTopic('tech-interview')">Next</button>
+    </div>
+    <div class="mt-3 d-flex gap-2 flex-wrap">
+      <button class="btn btn-link" onclick="showPage('techuni')">Back to Tech Stack</button>
+    </div>
+  </div>
+</div>
+

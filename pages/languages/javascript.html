@@ -1,0 +1,166 @@
+<h2 class="mb-3">JavaScript</h2>
+<div class="row">
+  <div class="col-12 d-lg-none">
+    <button class="btn btn-outline-secondary topics-toggle" type="button" onclick="toggleTopics('lang-js')">Topics</button>
+  </div>
+  <aside class="col-md-3 topics-sidebar-collapsible">
+    <div class="list-group sticky-sidebar" id="lang-js-topics">
+      <button class="list-group-item list-group-item-action active" onclick="showLanguageTopic('lang-js', 0)">Basics</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-js', 1)">DOM</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-js', 2)">Events</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-js', 3)">Async & Fetch</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-js', 4)">Modules</button>
+    </div>
+  </aside>
+  <div class="col-md-9"> 
+    <div class="language-topic active" data-index="0">
+      <h4>Basics</h4><br>
+
+      <h5>What is JavaScript?</h5>
+      <p>JavaScript is a scripting language you can use to make web pages interactive. JavaScript is one of the <b>3 languages</b> of the web 
+        everyone must learn along with <b><a href="#" data-bs-dismiss="offcanvas" onclick="showPage('lang-html')">HTML</a> and <a href="#" 
+        data-bs-dismiss="offcanvas" onclick="showPage('lang-css')">CSS</a></b>.
+      </p>
+      
+      <h5>How to Comment your code in JavaScript?</h5>
+      <p>Comments are lines in your code that are not executed. They are used to explain and clarify the code for yourself and others. 
+        In JavaScript, you can create comments in two ways:
+      </p>
+      <ul>
+        <li><b>Single-line comments:</b> Use two forward slashes (//) to comment out a single line of code.
+          <code><pre>// This is a single-line comment</pre></code>
+        </li>
+        <li><b>Multi-line comments:</b> Use /* to start the comment and */ to end it. This allows you to comment out multiple lines of code.
+          <code><pre>/* This is a multi-line comment
+          It can span multiple lines */</pre></code>
+        </li>
+      </ul>
+      <p><b>Note: </b>As you write code, you should regularly add comments to clarify the function of parts of your code. Good commenting can help 
+        communicate the intent of your code—both for others and for your future self.
+      </p>
+      
+      <h5>Know you variables</h5>
+      <p>Variables are used to store data values. In JavaScript, you can declare variables using <code>var</code>, <code>let</code>, or 
+        <code>const</code>. The most common way to declare a variable is by using <code>let</code> and <code>const</code>.
+      </p>
+      <ul>
+        <li><b>let:</b> Used to declare a variable that can be reassigned later.
+          <code><pre>let age = 25; // You can change the value of age later</pre></code>
+        </li>
+        <li><b>const:</b> Used to declare a variable that cannot be reasssigned. It must be initialized with a value.
+          <code><pre>const pi = 3.14; // You cannot change the value of pi later</pre></code>
+        </li>
+      </ul>
+      <p>Variables allow computers to store and manipulate data in a dynamic fashion.</p>
+      <p>Variables are similar to the x and y variables you use in mathematics, which means they're a simple name to represent the data we want 
+        to refer to.
+      </p>
+      <p>In JavaScript, variables can hold different types of data, such as numbers, strings (text), booleans (true/false), arrays (lists), 
+        and objects (key-value pairs).
+      </p>
+      <p>Here are some examples of declaring variables in JavaScript:</p>
+      <code>
+        let name = "John"; // A string variable<br>
+        let age = 30; // A number variable<br>
+        let isStudent = true; // A boolean variable<br>
+        let hobbies = ["reading", "coding", "gaming"]; // An array variable<br>
+        let person = { firstName: "Jane", lastName: "Doe" }; // An object variable<br>
+      </code>
+      <pre></pre>
+      <p>In the examples above, we declared variables using the <code>let</code> keyword, followed by the variable name and the value assigned to it. 
+        You can use these variables later in your code to perform operations, display information, or manipulate data.
+      </p>
+
+      <h5>Case Sensitivity in Variables</h5>
+      <p>In JavaScript all variables and function names are case sensitive. <code>MYVAR</code> is not the same as <code>MyVar</code> nor 
+        <code>myvar</code>. <br>
+        <b>Example:</b> <br>
+        <code>
+          var someVariable;<br>
+          var anotherVariableName;<br>
+          var thisVariableNameIsSoLong;<br>
+        </code>
+      </p>
+
+      <h5>Uninitialized Variables</h5>
+      <p>When JavaScript variables are declared, they have an initial value of <em><code>undefined</em></code>. If you do a mathematical operation 
+        on an <em><code>undefined</em></code> variable your result will be <code>NaN</code> which means <em>"Not a Number"</em>. If you concatenate a string with an undefined variable, you 
+        will get a string of <em><code>undefined</code></em>.
+      </p>
+      
+      <h5><code>var</code> vs <code>let </code>Keywords</h5>
+      <p>Using a <code>var</code> keyword will help in easily overwriting variable declarations. <br>
+        <!-- <code style="background-color: black;">
+          var x = 10;<br>
+          var x = 20; // This will overwrite the previous declaration of x<br>
+          console.log(x); // Output: 20<br>
+        </code> -->
+      </p>
+      <div class="playground">
+        <div id="editor1" class="editor"></div>
+        <div class="input-area">
+          <textarea id="input1" placeholder="Custom Input..."></textarea>
+        </div>
+        <button onclick="runCode('editor1','input1','output1')">Run</button>
+        <div id="output1" class="output">Output will appear here...</div>
+      </div>
+
+      <h5>Data Types in JavaScript</h5>
+      <p>JavaScript has several built-in data types that you can use to represent different kinds of values. The main data types in JavaScript 
+        are:
+      </p>
+      <ul>
+        <li><b>Number:</b> Represents numeric values, both integers and floating-point numbers.
+          <code><pre>let age = 25; // A number variable</pre></code>
+        </li>
+        <li><b>String:</b> Represents text values enclosed in single or double quotes.
+          <code><pre>let name = "John"; // A string variable</pre></code>
+        </li>
+        <li><b>Boolean:</b> Represents logical values, either true or false.
+          <code><pre>let isStudent = true; // A boolean variable</pre></code>
+        </li>
+        <li><b>Array:</b> Represents a list of values enclosed in square brackets.
+          <code><pre>let hobbies = ["reading", "coding", "gaming"]; // An array variable</pre></code>
+        </li>
+        <li><b>Object:</b> Represents a collection of key-value pairs enclosed in curly braces.
+          <code><pre>let person = { firstName: "Jane", lastName: "Doe" }; // An object variable</pre></code>
+        </li>
+        <li><b>null:</b> Represents the intentional absence of any object value.
+          <code><pre>let emptyValue = null; // A null variable</pre></code>
+        </li>
+        <li><b>undefined:</b> Represents a variable that has been declared but not assigned a value.
+          <code><pre>let uninitializedValue; // An undefined variable</pre></code>
+        </li>
+      </ul>
+      <p>You can use these data types to store and manipulate different kinds of information in your JavaScript programs. Understanding data 
+        types is essential for effective programming and helps you choose the right type for your variables based on the kind of data you want 
+        to work with.
+      </p> 
+      
+    </div>
+    <div class="language-topic" data-index="1">
+      <h4>DOM</h4>
+      <p>Selecting and manipulating elements, traversal, and styling.</p>
+    </div>
+    <div class="language-topic" data-index="2">
+      <h4>Events</h4>
+      <p>Event listeners, propagation, delegation, and common patterns.</p>
+    </div>
+    <div class="language-topic" data-index="3">
+      <h4>Async & Fetch</h4>
+      <p>Promises, async/await, error handling, and calling APIs.</p>
+    </div>
+    <div class="language-topic" data-index="4">
+      <h4>Modules</h4>
+      <p>ES modules, bundlers, and project structure for maintainability.</p>
+    </div>
+    <div class="d-flex justify-content-between mt-3">
+      <button class="btn btn-secondary" onclick="prevLanguageTopic('lang-js')">Previous</button>
+      <button class="btn btn-primary" onclick="nextLanguageTopic('lang-js')">Next</button>
+    </div>
+    <div class="mt-3 d-flex gap-2 flex-wrap">
+      <button class="btn btn-link" onclick="showPage('languages')">Back to Languages</button>
+    </div>
+  </div>
+</div>
+

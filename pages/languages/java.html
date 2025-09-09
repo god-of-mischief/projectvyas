@@ -1,0 +1,96 @@
+<h2 class="mb-3">Java</h2>
+<div class="row">
+    <div class="col-12 d-lg-none">
+        <button class="btn btn-outline-secondary topics-toggle" type="button" onclick="toggleTopics('lang-java')">Topics</button>
+    </div>
+    <aside class="col-md-3 topics-sidebar-collapsible">
+        <div class="list-group sticky-sidebar" id="lang-js-topics">
+            <button class="list-group-item list-group-item-action active" onclick="showLanguageTopic('lang-java', 0)">Level - 1 : Basics</button>
+            <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-java', 1)">Coming Soon</button>
+            <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-java', 2)">Coming Soon</button>
+            <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-java', 3)">Coming Soon</button>
+            <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-java', 4)">Coming Soon</button>
+        </div>
+    </aside>
+    <div class="col-md-9"> 
+        <div class="language-topic active" data-index="0">
+            <h4>Overview</h4><br>
+
+            <p>Java Course focuses on Java fundamentals through practical, hands-on topics that are essential before moving into 
+                advanced areas like multithreading, collections, JDBC, Servlets and frameworks like Spring or Hibernate.
+
+            <h5>What's Next?</h5>
+            <p>
+                <ul>
+                    <li>Java Basics and First Program</li>
+                    <li>Variables, Data Types and Literals</li>
+                    <li>Type Casting and Operators</li>
+                    <li>Conditional Statements</li>
+                    <li>Loops</li>
+                    <li>Basic Input and Output in Java</li>
+                    <li>Mini Project - Tic-Tac-Toe Game</li>
+                </ul>
+            </p>
+
+            <h5>Introduction to Java</h5>
+            <p>Java is a high-level, object-oriented programming language developed by Sun Microsystems in 1995. It is mostly used
+                for building desktop applications, web applications, Android apps, and enterprise systems.
+            </p>
+
+            <h5>Key Features of Java</h5>
+            <ul>
+                <li><b>Platform Independence:</b> Java is famous for its Write Once,Run Anywhere(WORA) feature. Thia means we can write 
+                    our Java code once, and it will run on any device or operating system if Java Virtual Machine is installed. Java code 
+                    is compiled into bytecode, which can run on any platform with a Java Virtual Machine (JVM).
+                </li>
+                <li><b>Simple:</b> No complex topics like pointers and multiple inheritance.</li>
+                <li><b>Object-Oriented:</b> Java follows the object-oriented programming paradigm, allowing for modular and reusable 
+                    code.
+                </li>
+                <li><b>Robust and Secure:</b> Java has strong memory management and built-in security features to protect against 
+                    vulnerabilities.
+                </li>
+                <li><b>Multithreading:</b> Java supports multithreading, enabling concurrent execution of multiple threads for improved 
+                    performance.
+                </li>
+                <li><b>Just-In-time (JIT) Compiler:</b> Java uses a JIT compiler. It improves performance by converting byte code into 
+                    machine readable code atthe time of excecution.
+                </li>
+                <li><b>Rich Standard Library:</b> Java provides a comprehensive standard library with pre-built classes and methods 
+                    for various tasks.
+                </li>
+            </ul>
+
+            <h5>Understanding Hello World</h5>
+            <p>Whenever we learn any new programming languge, the first step is always writing a simple "Hello World". Let's see how it
+                gets excecuted in Java.
+            </p>
+            
+        </div>
+
+    <div class="language-topic" data-index="1">
+      <h4>Coming Soon</h4>
+      <p>Coming Soon</p>
+    </div>
+    <div class="language-topic" data-index="2">
+      <h4>Coming Soon</h4>
+      <p>Coming Soon</p>
+    </div>
+    <div class="language-topic" data-index="3">
+      <h4>Coming Soon</h4>
+      <p>Coming Soon</p>
+    </div>
+    <div class="language-topic" data-index="4">
+      <h4>Coming Soon</h4>
+      <p>Coming Soon</p>
+    </div>
+    <div class="d-flex justify-content-between mt-3">
+      <button class="btn btn-secondary" onclick="prevLanguageTopic('lang-java')">Previous</button>
+      <button class="btn btn-primary" onclick="nextLanguageTopic('lang-java')">Next</button>
+    </div>
+    <div class="mt-3 d-flex gap-2 flex-wrap">
+      <button class="btn btn-link" onclick="showPage('languages')">Back to Languages</button>
+    </div>
+  </div>
+</div>
+

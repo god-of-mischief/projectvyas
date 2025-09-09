@@ -1,0 +1,73 @@
+.page {
+  display: none;
+}
+.page.active {
+  display: block;
+}
+
+.h5{
+  font-weight: 600;
+}
+
+/* Layout helpers */
+main { padding-top: 4.5rem; }
+
+/* Sticky sidebar for language topics */
+.sticky-sidebar {
+  position: sticky;
+  top: 5.5rem;
+  max-height: calc(100vh - 6.5rem);
+  overflow-y: auto;
+}
+
+.language-topic { display: none; }
+.language-topic.active { display: block; }
+
+/* Card polish */
+.card img.card-img-top { object-fit: contain; height: 140px; }
+
+/* Small utility for spacing under fixed navbar on very small screens */
+@media (max-width: 575.98px) {
+  main { padding-top: 5.25rem; }
+}
+
+/* Brand styling */
+:root {
+  --brand-primary: #6c5ce7;
+  --brand-primary-600: #5b4dd8;
+  --brand-surface: #ffffff;
+  --brand-text: #212529;
+}
+
+.navbar .navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--brand-primary);
+  --bs-btn-border-color: var(--brand-primary);
+  --bs-btn-hover-bg: var(--brand-primary-600);
+  --bs-btn-hover-border-color: var(--brand-primary-600);
+}
+
+.link-primary { color: var(--brand-primary); }
+
+/* Dark theme */
+.theme-dark body { background-color: #0f1115; color: #e2e6ee; }
+.theme-dark .navbar { background-color: #151823 !important; }
+.theme-dark .card { background-color: #171a25; border-color: #1f2432; }
+.theme-dark .list-group-item { background-color: #171a25; color: #e2e6ee; border-color: #1f2432; }
+.theme-dark .offcanvas { background-color: #151823; color: #e2e6ee; }
+.theme-dark .btn-primary { --bs-btn-bg: var(--brand-primary); --bs-btn-border-color: var(--brand-primary); }
+.theme-dark .btn-outline-secondary { color: #c9d1e1; border-color: #2a3142; }
+.theme-dark .btn-outline-secondary:hover { background-color: #2a3142; }
+
+/* Mobile topics toggle */
+.topics-toggle { display: none; }
+@media (max-width: 991.98px) {
+  .topics-toggle { display: block; margin-bottom: 1rem; }
+  .topics-sidebar-collapsible { display: none; }
+  .topics-sidebar-collapsible.show { display: block; }
+}
+ 
