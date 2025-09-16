@@ -5,61 +5,285 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Project Vyas is a learning platform with curated paths and language overviews to become a modern developer.">
   <title>Project Vyas – Learning Platform</title>
-  <link rel="stylesheet" href="css/styles.css">
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="container">
-      <nav class="navbar navbar-expand-lg fixed-top bg-white border-bottom">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#" onclick="showPage('home')">
-            <img src="images/jedi-order-brands.svg" alt="Logo" width="28" height="28" class="me-2 align-text-top">
-            Project Vyas
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" 
-          aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" data-page="home" aria-current="page" href="#" onclick="showPage('home')">Home</a>
-            <a class="nav-link" data-page="paths" href="#" onclick="showPage('paths')">Paths</a>
-            <a class="nav-link" data-page="languages" href="#" onclick="showPage('languages')">Languages</a>
-          </div>
-          <div class="ms-auto d-flex align-items-center">
-            <a class="nav-link" data-page="techuni" href="#" onclick="showPage('techuni')">TheTechStackUniverse</a>
-            <button id="themeToggleBtn" class="btn btn-sm btn-outline-secondary" type="button" onclick="toggleTheme()">Dark mode</button>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </header>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Mobile offcanvas menu -->
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="mobileMenuLabel">Project Vyas</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <div class="nav flex-column">
-        <a class="nav-link" href="#" data-bs-dismiss="offcanvas" onclick="showPage('home')">Home</a>
-        <a class="nav-link" href="#" data-bs-dismiss="offcanvas" onclick="showPage('paths')">Paths</a>
-        <a class="nav-link" href="#" data-bs-dismiss="offcanvas" onclick="showPage('languages')">Languages</a>
-        <hr>
-        <button class="btn btn-outline-secondary" type="button" data-bs-dismiss="offcanvas" onclick="toggleTheme()">Toggle dark mode</button>
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body data-theme="light">
+
+  <!-- Enhanced Navbar -->
+
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home" onclick="showPage('home')">
+        <img src="images/jedi-order-brands.svg" alt="Logo" width="28" height="28" class="me-2 align-text-top">
+        Project Vyas
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home" onclick="showPage('home')">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#paths" onclick="showPage('paths')">Learning Paths</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#languages" onclick="showPage('languages')">Languages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#techuni" onclick="showPage('techuni')">TheTechStackUniverse</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#resources" onclick="showPage('resources')">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#community" onclick="showPage('community')">Community</a>
+          </li>
+        </ul>
+        <div class="ms-auto d-flex align-items-center">
+          <button id="themeToggleBtn" class="btn btn-sm btn-outline-secondary" type="button" onclick="toggleTheme()">Dark mode</button>
+        </div>
       </div>
     </div>
-  </div>
+  </nav>
+ 
+  <!-- Main content -->
 
-  <main> 
+  <main style="margin-top: 80px;">
+
+    <!-- Enhanced Home Page -->
+
+    <section id="home" class="page active">
+
+      <!-- Hero section -->
+      <div class="hero-section">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 hero-content">
+              <h1 class="hero-title">Master Modern web Development</h1>
+              <p class="hero-subtitle">Join thousands of developers learning through structured paths, interactive tutorials, and real-world projects..</p>
+              <div class="d-flex gap-3 flex-wrap">
+                <button class="btn btn-primary-custom" onclick="showPage('paths')">
+                  <i class="bi bi-rocket-takeoff me-2"></i>Start Learning
+                </button>
+                <button class="btn btn-outline-custom" onclick="showPage('languages')">
+                  <i class="bi bi-code-slash me-2"></i>Browse Languages
+                </button>
+              </div>
+              <div class="mt-4">
+                <small class="text-muted">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Free Forever
+                  <i class="bi bi-check-circle-fill text-success ms-3 me-2"></i>No Credit Card Required
+                  <i class="bi bi-check-circle-fill text-success ms-3 me-2"></i>Learn at Your Pace
+                </small>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="position-relative">
+                <img src="https://placehold.co/600x400/6366f1/ffffff/?text=Learn+to+Code" alt="Learning Illustration" class="img-fluid rounded-3 shadow-lg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Section -->
+
+      <div class="stats-section">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-md-3">
+              <div class="stat-card">
+                <div class="stat-number">50K+</div>
+                <div class="stat-label">Active Learners</div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="stat-card">
+                <div class="stat-number">200+</div>
+                <div class="stat-label">Tutorials</div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="stat-card">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Learning Paths</div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="stat-card">
+                <div class="stat-number">95%</div>
+                <div class="stat-label">Success Rate</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features Section -->
+
+      <div class="container py-5">
+        <h2 class="text-center mb-5">Why Choose Project Vyas?</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-diagram-3"></i>
+              </div>
+              <h4>Structured Learning</h4>
+              <p>Follow carefully crafted paths from beginner to advanced levels with clear milestones.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-code-square"></i>
+              </div>
+              <h4>Hands-on practice</h4>
+              <p>Build real projects and solve coding challenges to reinforce your learning.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-people"></i>
+              </div>
+              <h4>Community Support</h4>
+              <p>Join a vibrant community of learners and mentors to share knowledge and get help.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Learning Paths Preview -->
+
+      <div class="container py-5">
+        <h2 class="text-center mb-5">Popular Learning Paths</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card-custom">
+              <div class="card-icon">
+                <i class="bi bi-globe"></i>
+              </div>
+              <h5>Full Stack Development</h5>
+              <p class="text-muted small">Master both frontend and backend development</p>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 75%;"></div>
+              </div>
+              <small class="text-muted">12 Modules • 120 Hours</small>
+              <button class="btn btn-primary-custom btn-sm mt-3" onclick="showPage('paths')">Start Path</button>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card-custom">
+              <div class="card-icon">
+                <i class="bi bi-palette"></i>
+              </div>
+              <h5>Frontend Development</h5>
+              <p class="text-muted small">Create beautiful, responsive user interfaces</p>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 60%;"></div>
+              </div>
+              <small class="text-muted">8 Modules • 80 Hours</small>
+              <button class="btn btn-primary-custom btn-sm mt-3" onclick="showPage('paths')">Start Path</button>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card-custom">
+              <div class="card-icon">
+                <i class="bi bi-server"></i>
+              </div>
+              <h5>Backend Development</h5>
+              <p class="text-muted small">Build robust APIs and server applications</p>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 45%;"></div>
+              </div>
+              <small class="text-muted">10 Modules • 100 Hours</small>
+              <button class="btn btn-primary-custom btn-sm mt-3" onclick="showPage('paths')">Start Path</button>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card-custom">
+              <div class="card-icon">
+                <i class="bi bi-robot"></i>
+              </div>
+              <h5>AI/ML Development</h5>
+              <p class="text-muted small">Dive into artificial intelligence and machine learning</p>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 30%;"></div>
+              </div>
+              <small class="text-muted">15 Modules • 150 Hours</small>
+              <button class="btn btn-primary-custom btn-sm mt-3" onclick="showPage('paths')">Start Path</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonials -->
+      
+      <div class="container py-5">
+        <h2 class="text-center mb-5">What Our Students Say</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <p class="testimonial-text">"Project Vyas transformed my career. The structured approach and hands-on projects helped me land my dream job!"</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar"></div>
+                <div>
+                  <strong>Sarah Chen</strong>
+                  <div class="small text-muted">Full Stack Developer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <p class="testimonial-text">"The community support is amazing. Whenever I'm stuck, there's always someone ready to help."</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar"></div>
+                <div>
+                  <strong>Raj Patel</strong>
+                  <div class="small text-muted">Frontend Developer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <p class="testimonial-text">"Best learning platform I've used. The projects are real-world and the content is always up-to-date."</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar"></div>
+                <div>
+                  <strong>Mike Johnson</strong>
+                  <div class="small text-muted">Software Engineer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+       
+      <div class="container py-5">
+        <div class="text-center p-5 rounded-3" style="background: var(--gradient-primary);">
+          <h2 class="text-white mb-3">Ready to Start Your Journey?</h2>
+          <p class="text-white mb-4">Join thousands of developers who are already learning with Project Vyas</p>
+          <button class="btn btn-light btn-lg" onclick="showPage('paths')">Get Started Free</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Language sections --> 
     <section id="lang-html" class="page" data-src="pages/languages/html.html">
       <div class="container py-4 dynamic-content"></div>
     </section>
@@ -83,6 +307,7 @@
     <section id="lang-node" class="page" data-src="pages/languages/node.html">
       <div class="container py-4 dynamic-content"></div>
     </section>
+
     <section id="languages" class="page">
       <div class="container py-5">
         <h2 class="mb-4">Browse Languages</h2>
@@ -144,24 +369,8 @@
         </div>
       </div>
     </section>
+
     <!-- Pages as sections -->
-    <section id="home" class="page active">
-      <div class="container py-5">
-        <div class="row align-items-center">
-          <div class="col-lg-7">
-            <h1 class="display-5 fw-semibold">Learn. Build. Grow.</h1>
-            <p class="lead text-muted">Project Vyas is your roadmap to becoming a modern developer. Choose a learning path or dive straight into a language.</p>
-            <div class="mt-4">
-              <a class="btn btn-primary btn-lg me-2" href="#" onclick="showPage('paths')">Explore Paths</a>
-              <a class="btn btn-outline-secondary btn-lg" href="#" onclick="showPage('languages')">Browse Languages</a>
-            </div>
-          </div>
-          <div class="col-lg-5 d-none d-lg-block text-center">
-            <img src="images/programmer.jpg" alt="Learning" class="img-fluid rounded shadow-sm">
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section id="paths" class="page">
       <div class="container py-5">
@@ -272,7 +481,7 @@
               <img src="images/html.svg" class="card-img-top p-4" alt="HTML">
               <div class="card-body d-flex flex-column">
                 <h6 class="card-title">Cyber Security</h6>
-                <button class="btn btn-outline-primary mt-auto" onclick="navigateToLanguage('tech-CybSe')">Start</button>
+                <button class="btn btn-outline-primary mt-auto" onclick="navigateToTech('tech-CybSe')">Start</button>
               </div>
             </div>
           </div>
@@ -281,7 +490,7 @@
               <img src="images/html.svg" class="card-img-top p-4" alt="HTML">
               <div class="card-body d-flex flex-column">
                 <h6 class="card-title">Interview Questions</h6>
-                <button class="btn btn-outline-primary mt-auto" onclick="navigateToLanguage('tech-interview')">Start</button>
+                <button class="btn btn-outline-primary mt-auto" onclick="navigateToTech('tech-interview')">Start</button>
               </div>
             </div>
           </div>
@@ -290,7 +499,7 @@
               <img src="images/html.svg" class="card-img-top p-4" alt="HTML">
               <div class="card-body d-flex flex-column">
                 <h6 class="card-title">DSA</h6>
-                <button class="btn btn-outline-primary mt-auto" onclick="navigateToLanguage('tech-DSA')">Start</button>
+                <button class="btn btn-outline-primary mt-auto" onclick="navigateToTech('tech-DSA')">Start</button>
               </div>
             </div>
           </div>
@@ -299,7 +508,7 @@
               <img src="images/html.svg" class="card-img-top p-4" alt="HTML">
               <div class="card-body d-flex flex-column">
                 <h6 class="card-title">Web Code Snippets</h6>
-                <button class="btn btn-outline-primary mt-auto" onclick="navigateToLanguage('tech-snippets')">Start</button>
+                <button class="btn btn-outline-primary mt-auto" onclick="navigateToTech('tech-snippets')">Start</button>
               </div>
             </div>
           </div>
@@ -308,7 +517,7 @@
               <img src="images/html.svg" class="card-img-top p-4" alt="HTML">
               <div class="card-body d-flex flex-column">
                 <h6 class="card-title">Maths</h6>
-                <button class="btn btn-outline-primary mt-auto" onclick="navigateToLanguage('tech-maths')">Start</button>
+                <button class="btn btn-outline-primary mt-auto" onclick="navigateToTech('tech-maths')">Start</button>
               </div>
             </div>
           </div>
@@ -320,11 +529,58 @@
 
   </main>
 
-  <footer>
-    <div class="container py-4 text-center text-muted small">
-      <p class="mb-0">© 2025 Project Vyas</p>
+  <!-- Enhanced Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Project Vyas</h4>
+          <p class="text-muted">Empowering developers worldwide with quality education and practical skills.</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Learning</h4>
+          <a href="#" class="footer-link">Learning Paths</a>
+          <a href="#" class="footer-link">Languages</a>
+          <a href="#" class="footer-link">Projects</a>
+          <a href="#" class="footer-link">Certifications</a>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Community</h4>
+          <a href="#" class="footer-link">Discord</a>
+          <a href="#" class="footer-link">Forum</a>
+          <a href="#" class="footer-link">Blog</a>
+          <a href="#" class="footer-link">Events</a>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Company</h4>
+          <a href="#" class="footer-link">About Us</a>
+          <a href="#" class="footer-link">Careers</a>
+          <a href="#" class="footer-link">Contact</a>
+          <a href="#" class="footer-link">Privacy Policy</a>
+        </div>
+      </div>
+      
+      <div class="text-center pt-4 mt-4 border-top border-secondary">
+        <p class="mb-0">© 2025 Project Vyas. All rights reserved. Made with ❤️</p>
+      </div>
     </div>
   </footer>
+
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle" onclick="toggleTheme()">
+    <i class="bi bi-moon-fill" id="theme-icon"></i>
+  </button>
+
+
 
   <script src="js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

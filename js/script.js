@@ -90,6 +90,10 @@ function navigateToLanguage(sectionId) {
   showPage(sectionId);
 }
 
+function navigateToTech(sectionId) {
+  showPage(sectionId);
+}
+
 // Language topic navigation helpers
 function getLanguageTopicContainers(langSectionId) {
   const section = document.getElementById(langSectionId);
