@@ -308,62 +308,120 @@
       <div class="container py-4 dynamic-content"></div>
     </section>
 
+    <section id="lang-typescript" class="page" data-src="pages/languages/typescript.html">
+      <div class="container py-4 dynamic-content"></div>
+    </section>
+
+    <section id="lang-sql" class="page" data-src="pages/languages/sql.html">
+      <div class="container py-4 dynamic-content"></div>
+    </section>
+
+    <section id="lang-jssample" class="page" data-src="pages/languages/js-sample.html">
+      <div class="container py-4 dynamic-content"></div>
+    </section>
+
     <section id="languages" class="page">
       <div class="container py-5">
-        <h2 class="mb-4">Browse Languages</h2>
+        <h1 class="mb-4">Browse Languages</h1>
+        <p class="lead text-muted mb-5">Deep dive into specific languages with comprehensive tutorials</p>
+        
         <div class="row g-4">
           <div class="col-6 col-md-4 col-lg-3">
-            <div class="card h-100 shadow-sm">
-              <img src="images/html.svg" class="card-img-top p-4" alt="HTML">
-              <div class="card-body d-flex flex-column">
-                <h6 class="card-title">HTML</h6>
-                <button class="btn btn-outline-primary mt-auto" onclick="navigateToLanguage('lang-html')">Start</button>
+            <div class="card-custom text-center">
+              <div class="card-icon mx-auto">
+                <i class="bi bi-filetype-html"></i>
               </div>
+              <h5>HTML</h5>
+              <p class="small text-muted">Structure web pages</p>
+              <button class="btn btn-outline-primary btn-sm w-100" onclick="navigateToLanguage('lang-html')">Learn</button>
             </div>
           </div>
+          
           <div class="col-6 col-md-4 col-lg-3">
-            <div class="card h-100 shadow-sm">
-              <img src="images/css.svg" class="card-img-top p-4" alt="CSS">
-              <div class="card-body d-flex flex-column">
-                <h6 class="card-title">CSS</h6>
-                <button class="btn btn-outline-primary mt-auto" onclick="navigateToLanguage('lang-css')">Start</button>
+            <div class="card-custom text-center">
+              <div class="card-icon mx-auto">
+                <i class="bi bi-filetype-css"></i>
               </div>
+              <h5>CSS</h5>
+              <p class="small text-muted">Style and layout</p>
+              <button class="btn btn-outline-primary btn-sm w-100" onclick="navigateToLanguage('lang-css')">Learn</button>
             </div>
           </div>
+          
           <div class="col-6 col-md-4 col-lg-3">
-            <div class="card h-100 shadow-sm">
-              <img src="images/css.svg" class="card-img-top p-4" alt="Java">
-              <div class="card-body d-flex flex-column">
-                <h6 class="card-title">Java</h6>
-                <button class="btn btn-outline-primary mt-auto" onclick="navigateToLanguage('lang-java')">Start</button>
+            <div class="card-custom text-center">
+              <div class="card-icon mx-auto">
+                <i class="bi bi-filetype-js"></i>
               </div>
+              <h5>JavaScript</h5>
+              <p class="small text-muted">Interactive web apps</p>
+              <button class="btn btn-outline-primary btn-sm w-100" onclick="navigateToLanguage('lang-js')">Learn</button>
             </div>
           </div>
+          
           <div class="col-6 col-md-4 col-lg-3">
-            <div class="card h-100 shadow-sm">
-              <img src="images/javascript.svg" class="card-img-top p-4" alt="JavaScript">
-              <div class="card-body d-flex flex-column">
-                <h6 class="card-title">JavaScript</h6>
-                <button class="btn btn-outline-primary mt-auto" onclick="navigateToLanguage('lang-js')">Start</button>
+            <div class="card-custom text-center">
+              <div class="card-icon mx-auto">
+                <i class="bi bi-filetype-py"></i>
               </div>
+              <h5>Python</h5>
+              <p class="small text-muted">Versatile programming</p>
+              <button class="btn btn-outline-primary btn-sm w-100" onclick="navigateToLanguage('lang-python')">Learn</button>
             </div>
           </div>
+          
           <div class="col-6 col-md-4 col-lg-3">
-            <div class="card h-100 shadow-sm">
-              <img src="images/jedi-order-brands.png" class="card-img-top" alt="Python">
-              <div class="card-body d-flex flex-column">
-                <h6 class="card-title">Python</h6>
-                <button class="btn btn-outline-primary mt-auto" onclick="navigateToLanguage('lang-python')">Start</button>
+            <div class="card-custom text-center">
+              <div class="card-icon mx-auto">
+                <i class="bi bi-filetype-java"></i>
               </div>
+              <h5>Java</h5>
+              <p class="small text-muted">Enterprise applications</p>
+              <button class="btn btn-outline-primary btn-sm w-100" onclick="navigateToLanguage('lang-java')">Learn</button>
             </div>
           </div>
+          
           <div class="col-6 col-md-4 col-lg-3">
-            <div class="card h-100 shadow-sm">
-              <img src="images/jedi-order-brands.png" class="card-img-top" alt="Node.js">
-              <div class="card-body d-flex flex-column">
-                <h6 class="card-title">Node.js</h6>
-                <button class="btn btn-outline-primary mt-auto" onclick="navigateToLanguage('lang-node')">Start</button>
+            <div class="card-custom text-center">
+              <div class="card-icon mx-auto">
+                <i class="bi bi-server"></i>
               </div>
+              <h5>Node.js</h5>
+              <p class="small text-muted">Server-side JavaScript</p>
+              <button class="btn btn-outline-primary btn-sm w-100" onclick="navigateToLanguage('lang-node')">Learn</button>
+            </div>
+          </div>
+          
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="card-custom text-center">
+              <div class="card-icon mx-auto">
+                <i class="bi bi-database"></i>
+              </div>
+              <h5>SQL</h5>
+              <p class="small text-muted">Database queries</p>
+              <button class="btn btn-outline-primary btn-sm w-100" onclick="navigateToLanguage('lang-sql')">Learn</button>
+            </div>
+          </div>
+          
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="card-custom text-center">
+              <div class="card-icon mx-auto">
+                <i class="bi bi-code-slash"></i>
+              </div>
+              <h5>TypeScript</h5>
+              <p class="small text-muted">Type-safe JavaScript</p>
+              <button class="btn btn-outline-primary btn-sm w-100" onclick="navigateToLanguage('lang-typescript')">Learn</button>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="card-custom text-center">
+              <div class="card-icon mx-auto">
+                <i class="bi bi-code-slash"></i>
+              </div>
+              <h5>JSSample</h5>
+              <p class="small text-muted">SampleJavaScript</p>
+              <button class="btn btn-outline-primary btn-sm w-100" onclick="navigateToLanguage('lang-jssample')">Learn</button>
             </div>
           </div>
         </div>
@@ -374,56 +432,125 @@
 
     <section id="paths" class="page">
       <div class="container py-5">
-        <h2 class="mb-4">Choose your path</h2>
+        <h1 class="mb-4">Choose your path</h1>
+        <p class="lead text-muted mb-5">Select a structured path tailored to your goals and experience level</p>
+        
         <div class="row g-4">
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 shadow-sm">
-              <img src="images/jedi-order-brands.png" class="card-img-top" alt="Full Stack">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Full Stack</h5>
-                <p class="card-text small text-muted">Frontend + Backend + Databases + DevOps basics.</p>
-                <button class="btn btn-primary mt-auto" onclick="navigateToPath('path-fullstack')">Explore</button>
+          <div class="col-md-6 col-lg-4">
+            <div class="card-custom">
+              <div class="card-icon">
+                <i class="bi bi-stack"></i>
               </div>
+              <h4>Full Stack Development</h4>
+              <p class="text-muted">Complete journey from frontend to backend, databases, deployment</p>
+              <ul class="small text-muted">
+                <li>HTML, CSS, JavaScript</li>
+                <li>React & Node.js</li>
+                <li>MongoDB & PostgreSQL</li>
+                <li>Docker & Cloud Deployment</li>
+              </ul>
+              <button class="btn btn-primary-custom w-100 mt-3" onclick="navigateToPath('path-fullstack')">Start Learning</button>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 shadow-sm">
-              <img src="images/html.svg" class="card-img-top p-4" alt="Frontend">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Frontend</h5>
-                <p class="card-text small text-muted">HTML, CSS, JavaScript, frameworks, tooling, accessibility.</p>
-                <button class="btn btn-primary mt-auto" onclick="navigateToPath('path-frontend')">Explore</button>
+          <div class="col-md-6 col-lg-4">
+            <div class="card-custom">
+              <div class="card-icon">
+                <i class="bi bi-brush"></i>
               </div>
+              <h4>Frontend Development</h4>
+              <p class="text-muted">Master modern UI/UX development with latest frameworks</p>
+              <ul class="small text-muted">
+                <li>Responsive Design</li>
+                <li>JavaScript ES6+</li>
+                <li>React, Vue, or Angular</li>
+                <li>Performance Optimization</li>
+              </ul>
+              <button class="btn btn-primary-custom w-100 mt-3" onclick="navigateToPath('path-frontend')">Start Learning</button>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 shadow-sm">
-              <img src="images/javascript.svg" class="card-img-top p-4" alt="Backend">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Backend</h5>
-                <p class="card-text small text-muted">APIs, databases, authentication, scalability and testing.</p>
-                <button class="btn btn-primary mt-auto" onclick="navigateToPath('path-backend')">Explore</button>
+          
+          <div class="col-md-6 col-lg-4">
+            <div class="card-custom">
+              <div class="card-icon">
+                <i class="bi bi-gear"></i>
               </div>
+              <h4>Backend Development</h4>
+              <p class="text-muted">Build scalable APIs and server-side applications</p>
+              <ul class="small text-muted">
+                <li>RESTful APIs</li>
+                <li>Database Design</li>
+                <li>Authentication & Security</li>
+                <li>Microservices</li>
+              </ul>
+              <button class="btn btn-primary-custom w-100 mt-3" onclick="navigateToPath('path-backend')">Start Learning</button>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 shadow-sm">
-              <img src="images/javascript.svg" class="card-img-top p-4" alt="Fullstack mern">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Fullstack [MERN]</h5>
-                <p class="card-text small text-muted">HTML, CSS, JavaScript</p>
-                <button class="btn btn-primary mt-auto" onclick="navigateToPath('path-fullstackmernnsu')">Explore</button>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card-custom">
+              <div class="card-icon">
+                <i class="bi bi-stack"></i>
               </div>
+              <h4>Full Stack [Mern]</h4>
+              <p class="text-muted">Complete journey from frontend to backend, databases, deployment</p>
+              <ul class="small text-muted">
+                <li>HTML, CSS, JavaScript</li>
+                <li>React & Node.js</li>
+                <li>MongoDB & PostgreSQL</li>
+                <li>Docker & Cloud Deployment</li>
+              </ul>
+              <button class="btn btn-primary-custom w-100 mt-3" onclick="navigateToPath('path-fullstackmernnsu')">Start Learning</button>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 shadow-sm">
-              <img src="images/css.svg" class="card-img-top p-4" alt="AI/ML">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">AI / ML</h5>
-                <p class="card-text small text-muted">Python, data science, ML, model deployment and MLOps.</p>
-                <button class="btn btn-primary mt-auto" onclick="navigateToPath('path-aiml')">Explore</button>
+          
+          <div class="col-md-6 col-lg-4">
+            <div class="card-custom">
+              <div class="card-icon">
+                <i class="bi bi-cpu"></i>
               </div>
+              <h4>AI/ML Development</h4>
+              <p class="text-muted">Enter the world of artificial intelligence and machine learning</p>
+              <ul class="small text-muted">
+                <li>Python Fundamentals</li>
+                <li>Data Science Libraries</li>
+                <li>Machine Learning Models</li>
+                <li>Deep Learning & Neural Networks</li>
+              </ul>
+              <button class="btn btn-primary-custom w-100 mt-3" onclick="navigateToPath('path-aiml')">Start Learning</button>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-4">
+            <div class="card-custom">
+              <div class="card-icon">
+                <i class="bi bi-phone"></i>
+              </div>
+              <h4>Mobile Development</h4>
+              <p class="text-muted">Create native and cross-platform mobile applications</p>
+              <ul class="small text-muted">
+                <li>React Native</li>
+                <li>Flutter</li>
+                <li>iOS & Android</li>
+                <li>App Store Deployment</li>
+              </ul>
+              <button class="btn btn-primary-custom w-100 mt-3" onclick="navigateToPath('path-mobile')">Start Learning</button>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-4">
+            <div class="card-custom">
+              <div class="card-icon">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h4>DevOps & Cloud</h4>
+              <p class="text-muted">Master deployment, scaling, and infrastructure</p>
+              <ul class="small text-muted">
+                <li>CI/CD Pipelines</li>
+                <li>Docker & Kubernetes</li>
+                <li>AWS, Azure, GCP</li>
+                <li>Monitoring & Security</li>
+              </ul>
+              <button class="btn btn-primary-custom w-100 mt-3" onclick="navigateToPath('path-devops')">Start Learning</button>
             </div>
           </div>
         </div>
@@ -450,6 +577,15 @@
       <div class="container py-5 dynamic-content"></div>
     </section>
 
+    <section id="path-mobile" class="page" data-src="pages/paths/mobile.html">
+      <div class="container py-5 dynamic-content"></div>
+    </section>
+
+    <section id="path-devops" class="page" data-src="pages/paths/devops.html">
+      <div class="container py-5 dynamic-content"></div>
+    </section>
+
+
     <!--TheTechStackUniverse section -->
 
     <section id="tech-CybSe" class="page" data-src="pages/techuni/CybSe.html">
@@ -472,62 +608,138 @@
       <div class="container py-4 dynamic-content"></div>
     </section>
 
+    <section id="tech-git" class="page" data-src="pages/techuni/git.html">
+      <div class="container py-4 dynamic-content"></div>
+    </section>
+
     <section id="techuni" class="page">
       <div class="container py-5">
-        <h2 class="mb-4">Explore TheTechStackUniverse</h2>
+        <h1 class="mb-4">The Tech Stack Universe</h1>
+        <p class="lead text-muted mb-5">Explore specialized topics and advanced concepts</p>
+        
         <div class="row g-4">
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="card h-100 shadow-sm">
-              <img src="images/html.svg" class="card-img-top p-4" alt="HTML">
-              <div class="card-body d-flex flex-column">
-                <h6 class="card-title">Cyber Security</h6>
-                <button class="btn btn-outline-primary mt-auto" onclick="navigateToTech('tech-CybSe')">Start</button>
+          <div class="col-md-6 col-lg-4">
+            <div class="card-custom">
+              <div class="card-icon">
+                <i class="bi bi-shield-lock"></i>
               </div>
+              <h4>Cyber Security</h4>
+              <p class="text-muted">Learn about web security, ethical hacking, and protection strategies</p>
+              <button class="btn btn-primary-custom w-100" onclick="navigateToTech('tech-CybSe')">Explore</button>
             </div>
           </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="card h-100 shadow-sm">
-              <img src="images/html.svg" class="card-img-top p-4" alt="HTML">
-              <div class="card-body d-flex flex-column">
-                <h6 class="card-title">Interview Questions</h6>
-                <button class="btn btn-outline-primary mt-auto" onclick="navigateToTech('tech-interview')">Start</button>
+          
+          <div class="col-md-6 col-lg-4">
+            <div class="card-custom">
+              <div class="card-icon">
+                <i class="bi bi-diagram-2"></i>
               </div>
+              <h4>DSA</h4>
+              <p class="text-muted">Master problem-solving and optimize your code</p>
+              <button class="btn btn-primary-custom w-100" onclick="navigateToTech('tech-DSA')">Explore</button>
             </div>
           </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="card h-100 shadow-sm">
-              <img src="images/html.svg" class="card-img-top p-4" alt="HTML">
-              <div class="card-body d-flex flex-column">
-                <h6 class="card-title">DSA</h6>
-                <button class="btn btn-outline-primary mt-auto" onclick="navigateToTech('tech-DSA')">Start</button>
+          
+          <div class="col-md-6 col-lg-4">
+            <div class="card-custom">
+              <div class="card-icon">
+                <i class="bi bi-person-badge"></i>
               </div>
+              <h4>Interview Preparation</h4>
+              <p class="text-muted">Ace your technical interviews with curated questions</p>
+              <button class="btn btn-primary-custom w-100" onclick="navigateToTech('tech-interview')">Explore</button>
             </div>
           </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="card h-100 shadow-sm">
-              <img src="images/html.svg" class="card-img-top p-4" alt="HTML">
-              <div class="card-body d-flex flex-column">
-                <h6 class="card-title">Web Code Snippets</h6>
-                <button class="btn btn-outline-primary mt-auto" onclick="navigateToTech('tech-snippets')">Start</button>
+          
+          <div class="col-md-6 col-lg-4">
+            <div class="card-custom">
+              <div class="card-icon">
+                <i class="bi bi-code"></i>
               </div>
+              <h4>Code Snippets</h4>
+              <p class="text-muted">Ready-to-use code snippets for common problems</p>
+              <button class="btn btn-primary-custom w-100" onclick="navigateToTech('tech-snippets')">Explore</button>
             </div>
           </div>
-          <div class="col-6 col-md-4 col-lg-3">
-            <div class="card h-100 shadow-sm">
-              <img src="images/html.svg" class="card-img-top p-4" alt="HTML">
-              <div class="card-body d-flex flex-column">
-                <h6 class="card-title">Maths</h6>
-                <button class="btn btn-outline-primary mt-auto" onclick="navigateToTech('tech-maths')">Start</button>
+          
+          <div class="col-md-6 col-lg-4">
+            <div class="card-custom">
+              <div class="card-icon">
+                <i class="bi bi-calculator"></i>
               </div>
+              <h4>Mathematics for CS</h4>
+              <p class="text-muted">Essential math concepts for computer science</p>
+              <button class="btn btn-primary-custom w-100" onclick="navigateToTech('tech-maths')">Explore</button>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-4">
+            <div class="card-custom">
+              <div class="card-icon">
+                <i class="bi bi-git"></i>
+              </div>
+              <h4>Version Control</h4>
+              <p class="text-muted">Master Git, GitHub, and collaboration workflows</p>
+              <button class="btn btn-primary-custom w-100" onclick="navigateToTech('tech-git')">Explore</button>
             </div>
           </div>
         </div>
       </div>
     </section>
-      
-
-
   </main>
+
+  <!-- Community Page -->
+  <section id="community" class="page">
+    <div class="container py-5">
+      <h1 class="mb-4">Join Our Community</h1>
+      <p class="lead text-muted mb-5">Connect with fellow learners, share knowledge, and grow together</p>
+      
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card-custom text-center">
+            <div class="card-icon mx-auto">
+              <i class="bi bi-discord"></i>
+            </div>
+            <h4>Discord Server</h4>
+            <p class="text-muted">Join 10,000+ developers in real-time discussions</p>
+            <button class="btn btn-primary-custom w-100">Join Discord</button>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="card-custom text-center">
+            <div class="card-icon mx-auto">
+              <i class="bi bi-chat-dots"></i>
+            </div>
+            <h4>Discussion Forum</h4>
+            <p class="text-muted">Ask questions and share solutions</p>
+            <button class="btn btn-primary-custom w-100">Visit Forum</button>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="card-custom text-center">
+            <div class="card-icon mx-auto">
+              <i class="bi bi-github"></i>
+            </div>
+            <h4>GitHub Community</h4>
+            <p class="text-muted">Contribute to open-source projects</p>
+            <button class="btn btn-primary-custom w-100">View Projects</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-5 p-4 rounded-3 bg-light">
+        <h3 class="mb-3">Community Guidelines</h3>
+        <ul>
+          <li>Be respectful and inclusive to all members</li>
+          <li>Share knowledge and help others learn</li>
+          <li>Provide constructive feedback</li>
+          <li>Follow our code of conduct</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
   <!-- Enhanced Footer -->
   <footer class="footer">
