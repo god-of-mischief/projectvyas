@@ -165,6 +165,7 @@ body {
   margin-bottom: 1.5rem;
   background: var(--gradient-primary);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: fadeInUp 0.8s ease;
 }
