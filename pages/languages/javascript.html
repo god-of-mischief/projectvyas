@@ -28,11 +28,11 @@
       </p>
       <ul>
         <li><b>Single-line comments:</b> Use two forward slashes (//) to comment out a single line of code.
-          <code><pre>// This is a single-line comment</pre></code>
+          <pre class="code-block">// This is a single-line comment</pre>
         </li>
         <li><b>Multi-line comments:</b> Use /* to start the comment and */ to end it. This allows you to comment out multiple lines of code.
-          <code><pre>/* This is a multi-line comment
-          It can span multiple lines */</pre></code>
+          <pre class="code-block">/* This is a multi-line comment
+          It can span multiple lines */</pre>
         </li>
       </ul>
       <p><b>Note: </b>As you write code, you should regularly add comments to clarify the function of parts of your code. Good commenting can help 
@@ -45,10 +45,10 @@
       </p>
       <ul>
         <li><b>let:</b> Used to declare a variable that can be reassigned later.
-          <code><pre>let age = 25; // You can change the value of age later</pre></code>
+          <code><pre class="code-block">let age = 25; // You can change the value of age later</pre></code>
         </li>
         <li><b>const:</b> Used to declare a variable that cannot be reasssigned. It must be initialized with a value.
-          <code><pre>const pi = 3.14; // You cannot change the value of pi later</pre></code>
+          <code><pre class="code-block">const pi = 3.14; // You cannot change the value of pi later</pre></code>
         </li>
       </ul>
       <p>Variables allow computers to store and manipulate data in a dynamic fashion.</p>
@@ -59,14 +59,13 @@
         and objects (key-value pairs).
       </p>
       <p>Here are some examples of declaring variables in JavaScript:</p>
-      <code>
-        let name = "John"; // A string variable<br>
-        let age = 30; // A number variable<br>
-        let isStudent = true; // A boolean variable<br>
-        let hobbies = ["reading", "coding", "gaming"]; // An array variable<br>
-        let person = { firstName: "Jane", lastName: "Doe" }; // An object variable<br>
+      <code><pre class="code-block">
+let name = "John"; // A string variable
+let age = 30; // A number variable
+let isStudent = true; // A boolean variable
+let hobbies = ["reading", "coding", "gaming"]; // An array variable
+let person = { firstName: "Jane", lastName: "Doe" }; // An object variable</pre>
       </code>
-      <pre></pre>
       <p>In the examples above, we declared variables using the <code>let</code> keyword, followed by the variable name and the value assigned to it. 
         You can use these variables later in your code to perform operations, display information, or manipulate data.
       </p>
@@ -75,10 +74,10 @@
       <p>In JavaScript all variables and function names are case sensitive. <code>MYVAR</code> is not the same as <code>MyVar</code> nor 
         <code>myvar</code>. <br>
         <b>Example:</b> <br>
-        <code>
-          var someVariable;<br>
-          var anotherVariableName;<br>
-          var thisVariableNameIsSoLong;<br>
+        <code><pre class="code-block">
+var someVariable;
+var anotherVariableName;
+var thisVariableNameIsSoLong;</pre>
         </code>
       </p>
 
@@ -90,11 +89,10 @@
       
       <h5><code>var</code> vs <code>let </code>Keywords</h5>
       <p>Using a <code>var</code> keyword will help in easily overwriting variable declarations. <br>
-        <!-- <code style="background-color: black;">
-          var x = 10;<br>
-          var x = 20; // This will overwrite the previous declaration of x<br>
-          console.log(x); // Output: 20<br>
-        </code> -->
+        <pre class="code-block">
+var x = 10;
+var x = 20; // This will overwrite the previous declaration of x
+console.log(x); // Output: 20</pre>
       </p>
       <div class="playground">
         <div id="editor1" class="editor"></div>

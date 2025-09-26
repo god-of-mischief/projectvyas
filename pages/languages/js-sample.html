@@ -1,89 +1,428 @@
-
-    <div class="content-wrapper">
-        <!-- Left Sidebar - Topics -->
-        <aside class="sidebar left-sidebar">
-            <div class="sidebar-title">Topics</div>
-            <a href="#" class="sidebar-item active">Introduction</a>
-            <a href="#" class="sidebar-item">Variables & Data Types</a>
-            <a href="#" class="sidebar-item">Functions</a>
-            <a href="#" class="sidebar-item">Objects & Arrays</a>
-            <a href="#" class="sidebar-item">DOM Manipulation</a>
-            <a href="#" class="sidebar-item">Async JavaScript</a>
-            <a href="#" class="sidebar-item">ES6+ Features</a>
-            <a href="#" class="sidebar-item">Error Handling</a>
-        </aside>
-        
-        <!-- Main Content -->
-        <div class="main-content">
-            <h1>JavaScript Fundamentals</h1>
-            <p class="lead">Master the language of the web</p>
-          
-            <div class="mt-4">
-                <h2 id="intro">Introduction to JavaScript</h2>
-                <p>JavaScript is a high-level, interpreted programming language that conforms to the ECMAScript specification. It's one of the core technologies of the World Wide Web, alongside HTML and CSS.</p>
-
-                <div class="code-block">
-                    <pre>
-// Your first JavaScript program
-console.log("Hello, World!");
-
-// Variables
-let name = "John";
-const age = 25;
-
-// Functions
-function greet(person) {
-  return `Hello, ${person}!`;
-}
-                    </pre>
-                </div>
-            
-                <h3 id="why-js">Why Learn JavaScript?</h3>
-                <ul>
-                    <li>It's the only programming language native to web browsers</li>
-                    <li>Can be used for both frontend and backend development</li>
-                    <li>Large ecosystem with countless libraries and frameworks</li>
-                    <li>High demand in the job market</li>
-                </ul>
-                
-                <h3 id="setup">Setting Up Your Environment</h3>
-                <p>To start coding in JavaScript, you need:</p>
-                <ol>
-                    <li>A text editor (VS Code recommended)</li>
-                    <li>A web browser (Chrome, Firefox, or Edge)</li>
-                    <li>Node.js for running JavaScript outside the browser</li>
-                </ol>
-                
-                <h2 id="variables">Variables and Data Types</h2>
-                <p>JavaScript has several ways to declare variables and multiple data types...</p>
-                
-                <div class="code-block">
-                    <pre>
-// Variable declarations
-let mutableVariable = "I can change";
-const constantVariable = "I cannot change";
-var oldStyleVariable = "Avoid using var";
-
-// Data types
-let string = "Hello";
-let number = 42;
-let boolean = true;
-let array = [1, 2, 3];
-let object = { name: "John", age: 30 };
-                    </pre>
-                </div>
-            </div>
-        </div>
-
-        <!-- Right Sidebar - Table of Contents -->
-        <aside class="sidebar right-sidebar">
-            <div class="sidebar-title">On This Page</div>
-            <div class="toc-item active">Introduction to JavaScript</div>
-            <div class="toc-item">Why Learn JavaScript?</div>
-            <div class="toc-item">Setting Up Your Environment</div>
-            <div class="toc-item">Variables and Data Types</div>
-            <div class="toc-item">Primitive Types</div>
-            <div class="toc-item">Complex Types</div>
-            <div class="toc-item">Type Conversion</div>
-        </aside>
+<h2 class="mb-3">JavaScript</h2>
+<div class="row">
+  <div class="col-12 d-lg-none">
+    <button class="btn btn-outline-secondary topics-toggle" type="button" onclick="toggleTopics('lang-jssample')">Topics</button>
+  </div>
+  <aside class="col-md-3 topics-sidebar-collapsible">
+    <div class="list-group sticky-sidebar" id="lang-jssample-topics">
+      <button class="list-group-item list-group-item-action active" onclick="showLanguageTopic('lang-jssample', 0)">Basics</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-jssample', 1)">DOM</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-jssample', 2)">Events</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-jssample', 3)">Async & Fetch</button>
+      <button class="list-group-item list-group-item-action" onclick="showLanguageTopic('lang-jssample', 4)">Modules</button>
     </div>
+  </aside>
+  <div class="col-md-9"> 
+    <div class="language-topic active" data-index="0">
+      <h4>Basics</h4><br>
+
+      <h5>What is JavaScript?</h5>
+      <p>JavaScript is a scripting language you can use to make web pages interactive. JavaScript is one of the <b>3 languages</b> of the web 
+        everyone must learn along with <b><a href="#" data-bs-dismiss="offcanvas" onclick="showPage('lang-html')">HTML</a> and <a href="#" 
+        data-bs-dismiss="offcanvas" onclick="showPage('lang-css')">CSS</a></b>.
+      </p>
+      
+      <h5>How to Comment your code in JavaScript?</h5>
+      <p>Comments are lines in your code that are not executed. They are used to explain and clarify the code for yourself and others. 
+        In JavaScript, you can create comments in two ways:
+      </p>
+      <ul>
+        <li><b>Single-line comments:</b> Use two forward slashes (//) to comment out a single line of code.
+          <code><pre>// This is a single-line comment</pre></code>
+        </li>
+        <li><b>Multi-line comments:</b> Use /* to start the comment and */ to end it. This allows you to comment out multiple lines of code.
+          <code><pre>/* This is a multi-line comment
+          It can span multiple lines */</pre></code>
+        </li>
+      </ul>
+      <p><b>Note: </b>As you write code, you should regularly add comments to clarify the function of parts of your code. Good commenting can help 
+        communicate the intent of your code—both for others and for your future self.
+      </p>
+      
+      <h5>Know your variables</h5>
+      <p>Variables are used to store data values. In JavaScript, you can declare variables using <code>var</code>, <code>let</code>, or 
+        <code>const</code>. The most common way to declare a variable is by using <code>let</code> and <code>const</code>.
+      </p>
+      <ul>
+        <li><b>let:</b> Used to declare a variable that can be reassigned later.
+          <code><pre>let age = 25; // You can change the value of age later</pre></code>
+        </li>
+        <li><b>const:</b> Used to declare a variable that cannot be reassigned. It must be initialized with a value.
+          <code><pre>const pi = 3.14; // You cannot change the value of pi later</pre></code>
+        </li>
+      </ul>
+
+      <h5>Try JavaScript - Interactive Multi-Language Editor</h5>
+      <p>Try modifying the code below, choose your language, and click "Run" to see the output:</p>
+      
+      <div class="playground">
+        <div class="editor-header">
+          <h6 class="editor-title">Interactive Code Editor</h6>
+          <div class="language-selector">
+            <select id="editor1-language" onchange="changeEditorLanguage('editor1', this.value)">
+              <option value="javascript">JavaScript</option>
+              <option value="python">Python</option>
+              <option value="java">Java</option>
+              <option value="cpp">C++</option>
+              <option value="c">C</option>
+              <option value="typescript">TypeScript</option>
+            </select>
+          </div>
+        </div>
+        <div id="editor1" class="editor"></div>
+        <div class="editor-controls">
+          <div class="input-area">
+            <label class="input-label" for="input1">Custom Input (optional):</label>
+            <textarea id="input1" placeholder="Enter any input your program might need..."></textarea>
+          </div>
+          <div class="control-section">
+            <button class="run-button" onclick="runCode('editor1','input1','output1')">
+              <i class="bi bi-play-fill"></i> Run Code
+            </button>
+            <button class="clear-button" onclick="document.getElementById('output1').innerHTML = 'Output will appear here...'; document.getElementById('output1').className = 'output';">
+              Clear Output
+            </button>
+          </div>
+        </div>
+        <div id="output1" class="output">Click "Run Code" to see the output...</div>
+      </div>
+
+      <h5>Case Sensitivity in Variables</h5>
+      <p>In JavaScript all variables and function names are case sensitive. <code>MYVAR</code> is not the same as <code>MyVar</code> nor 
+        <code>myvar</code>. <br>
+        <b>Example:</b> <br>
+        <code>
+          var someVariable;<br>
+          var anotherVariableName;<br>
+          var thisVariableNameIsSoLong;<br>
+        </code>
+      </p>
+
+      <h5>Uninitialized Variables</h5>
+      <p>When JavaScript variables are declared, they have an initial value of <em><code>undefined</code></em>. If you do a mathematical operation 
+        on an <em><code>undefined</code></em> variable your result will be <code>NaN</code> which means <em>"Not a Number"</em>. If you concatenate a string with an undefined variable, you 
+        will get a string of <em><code>undefined</code></em>.
+      </p>
+      
+      <h5><code>var</code> vs <code>let</code> Keywords</h5>
+      <p>Using a <code>var</code> keyword can lead to easily overwriting variable declarations, which can cause bugs. Here's why <code>let</code> is preferred:</p>
+      
+      <div class="playground">
+        <div class="editor-header">
+          <h6 class="editor-title">Variable Declaration Comparison</h6>
+          <div class="language-selector">
+            <select id="editor2-language" onchange="changeEditorLanguage('editor2', this.value)">
+              <option value="javascript">JavaScript</option>
+              <option value="python">Python</option>
+              <option value="java">Java</option>
+              <option value="cpp">C++</option>
+              <option value="c">C</option>
+              <option value="typescript">TypeScript</option>
+            </select>
+          </div>
+        </div>
+        <div id="editor2" class="editor"></div>
+        <div class="editor-controls">
+          <div class="input-area">
+            <label class="input-label" for="input2">Custom Input (optional):</label>
+            <textarea id="input2" placeholder="Custom input (optional)..."></textarea>
+          </div>
+          <div class="control-section">
+            <button class="run-button" onclick="runCode('editor2','input2','output2')">
+              <i class="bi bi-play-fill"></i> Run Code
+            </button>
+            <button class="clear-button" onclick="document.getElementById('output2').innerHTML = 'Click Run Code to see the difference...'; document.getElementById('output2').className = 'output';">
+              Clear Output
+            </button>
+          </div>
+        </div>
+        <div id="output2" class="output">Click "Run Code" to see the difference between var and let...</div>
+      </div>
+
+      <h5>Data Types in JavaScript</h5>
+      <p>JavaScript has several built-in data types that you can use to represent different kinds of values. The main data types in JavaScript 
+        are:
+      </p>
+      <ul>
+        <li><b>Number:</b> Represents numeric values, both integers and floating-point numbers.
+          <code><pre>let age = 25; // A number variable</pre></code>
+        </li>
+        <li><b>String:</b> Represents text values enclosed in single or double quotes.
+          <code><pre>let name = "John"; // A string variable</pre></code>
+        </li>
+        <li><b>Boolean:</b> Represents logical values, either true or false.
+          <code><pre>let isStudent = true; // A boolean variable</pre></code>
+        </li>
+        <li><b>Array:</b> Represents a list of values enclosed in square brackets.
+          <code><pre>let hobbies = ["reading", "coding", "gaming"]; // An array variable</pre></code>
+        </li>
+        <li><b>Object:</b> Represents a collection of key-value pairs enclosed in curly braces.
+          <code><pre>let person = { firstName: "Jane", lastName: "Doe" }; // An object variable</pre></code>
+        </li>
+        <li><b>null:</b> Represents the intentional absence of any object value.
+          <code><pre>let emptyValue = null; // A null variable</pre></code>
+        </li>
+        <li><b>undefined:</b> Represents a variable that has been declared but not assigned a value.
+          <code><pre>let uninitializedValue; // An undefined variable</pre></code>
+        </li>
+      </ul>
+      <p>You can use these data types to store and manipulate different kinds of information in your JavaScript programs. Understanding data 
+        types is essential for effective programming and helps you choose the right type for your variables based on the kind of data you want 
+        to work with.
+      </p> 
+      
+    </div>
+    <div class="language-topic" data-index="1">
+      <h4>DOM Manipulation</h4>
+      <p>The Document Object Model (DOM) allows JavaScript to interact with HTML elements on a web page.</p>
+      
+      <h5>Selecting Elements</h5>
+      <p>You can select HTML elements using various methods:</p>
+      <ul>
+        <li><code>document.getElementById()</code> - Select by ID</li>
+        <li><code>document.getElementsByClassName()</code> - Select by class name</li>
+        <li><code>document.querySelector()</code> - Select using CSS selectors</li>
+        <li><code>document.querySelectorAll()</code> - Select all matching elements</li>
+      </ul>
+      
+      <div class="playground">
+        <div class="editor-header">
+          <h6 class="editor-title">DOM Manipulation Example</h6>
+          <div class="language-selector">
+            <select id="editor3-language" onchange="changeEditorLanguage('editor3', this.value)">
+              <option value="javascript">JavaScript</option>
+              <option value="python">Python</option>
+              <option value="java">Java</option>
+              <option value="cpp">C++</option>
+              <option value="c">C</option>
+              <option value="typescript">TypeScript</option>
+            </select>
+          </div>
+        </div>
+        <div id="editor3" class="editor"></div>
+        <div class="editor-controls">
+          <div class="input-area">
+            <label class="input-label" for="input3">Input:</label>
+            <textarea id="input3" placeholder="Try different element selectors..."></textarea>
+          </div>
+          <div class="control-section">
+            <button class="run-button" onclick="runCode('editor3','input3','output3')">
+              <i class="bi bi-play-fill"></i> Run Code
+            </button>
+          </div>
+        </div>
+        <div id="output3" class="output">DOM manipulation results will appear here...</div>
+      </div>
+    </div>
+    
+    <div class="language-topic" data-index="2">
+      <h4>Events</h4>
+      <p>Events allow JavaScript to respond to user interactions like clicks, key presses, and form submissions.</p>
+      
+      <h5>Common Event Types</h5>
+      <ul>
+        <li><code>click</code> - Mouse click</li>
+        <li><code>keydown</code> - Key press</li>
+        <li><code>submit</code> - Form submission</li>
+        <li><code>load</code> - Page load</li>
+        <li><code>resize</code> - Window resize</li>
+      </ul>
+      
+      <div class="playground">
+        <div class="editor-header">
+          <h6 class="editor-title">Event Handling Example</h6>
+          <div class="language-selector">
+            <select id="editor4-language" onchange="changeEditorLanguage('editor4', this.value)">
+              <option value="javascript">JavaScript</option>
+              <option value="python">Python</option>
+              <option value="java">Java</option>
+              <option value="cpp">C++</option>
+              <option value="c">C</option>
+              <option value="typescript">TypeScript</option>
+            </select>
+          </div>
+        </div>
+        <div id="editor4" class="editor"></div>
+        <div class="editor-controls">
+          <div class="input-area">
+            <label class="input-label" for="input4">Input:</label>
+            <textarea id="input4" placeholder="Event-related input..."></textarea>
+          </div>
+          <div class="control-section">
+            <button class="run-button" onclick="runCode('editor4','input4','output4')">
+              <i class="bi bi-play-fill"></i> Run Code
+            </button>
+          </div>
+        </div>
+        <div id="output4" class="output">Event handling results will appear here...</div>
+      </div>
+    </div>
+    
+    <div class="language-topic" data-index="3">
+      <h4>Async & Fetch</h4>
+      <p>Modern JavaScript provides powerful tools for handling asynchronous operations and making API calls.</p>
+      
+      <h5>Promises and Async/Await</h5>
+      <p>Promises represent future values, and async/await makes asynchronous code easier to read and write.</p>
+      
+      <div class="playground">
+        <div class="editor-header">
+          <h6 class="editor-title">Async JavaScript Example</h6>
+          <div class="language-selector">
+            <select id="editor5-language" onchange="changeEditorLanguage('editor5', this.value)">
+              <option value="javascript">JavaScript</option>
+              <option value="python">Python</option>
+              <option value="java">Java</option>
+              <option value="cpp">C++</option>
+              <option value="c">C</option>
+              <option value="typescript">TypeScript</option>
+            </select>
+          </div>
+        </div>
+        <div id="editor5" class="editor"></div>
+        <div class="editor-controls">
+          <div class="input-area">
+            <label class="input-label" for="input5">Input:</label>
+            <textarea id="input5" placeholder="API endpoint or async operation..."></textarea>
+          </div>
+          <div class="control-section">
+            <button class="run-button" onclick="runCode('editor5','input5','output5')">
+              <i class="bi bi-play-fill"></i> Run Code
+            </button>
+          </div>
+        </div>
+        <div id="output5" class="output">Async operation results will appear here...</div>
+      </div>
+      
+      <h5>Fetch API Example</h5>
+      <p>The Fetch API provides a modern way to make HTTP requests:</p>
+      <div class="code-snippet">
+        <pre><code>// GET request
+fetch('https://api.example.com/data')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+
+// POST request
+fetch('https://api.example.com/data', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ key: 'value' })
+})
+  .then(response => response.json())
+  .then(data => console.log(data));</code></pre>
+      </div>
+    </div>
+    
+    <div class="language-topic" data-index="4">
+      <h4>ES6+ Modules</h4>
+      <p>ES6 modules allow you to organize code into reusable pieces and manage dependencies effectively.</p>
+      
+      <h5>Import and Export</h5>
+      <p>Use <code>export</code> to expose functions, variables, or classes from a module, and <code>import</code> to use them in other files.</p>
+      
+      <div class="code-snippet">
+        <pre><code>// math.js - Named exports
+export function add(a, b) {
+  return a + b;
+}
+
+export function multiply(a, b) {
+  return a * b;
+}
+
+export const PI = 3.14159;
+
+// Default export
+export default function subtract(a, b) {
+  return a - b;
+}
+
+// main.js - Importing
+import subtract, { add, multiply, PI } from './math.js';
+import * as mathUtils from './math.js';
+
+console.log(add(2, 3)); // 5
+console.log(multiply(4, 5)); // 20
+console.log(PI); // 3.14159
+console.log(subtract(10, 3)); // 7
+
+// Using namespace import
+console.log(mathUtils.add(1, 2)); // 3</code></pre>
+      </div>
+      
+      <h5>Module Benefits</h5>
+      <p>Modules help you:</p>
+      <ul>
+        <li><strong>Organize code:</strong> Split functionality into logical units</li>
+        <li><strong>Encapsulation:</strong> Keep implementation details private</li>
+        <li><strong>Reusability:</strong> Share code across multiple files</li>
+        <li><strong>Dependency management:</strong> Clearly define what each module needs</li>
+        <li><strong>Tree shaking:</strong> Bundlers can remove unused code</li>
+        <li><strong>Namespace pollution:</strong> Avoid global variable conflicts</li>
+      </ul>
+      
+      <h5>Dynamic Imports</h5>
+      <p>ES2020 introduced dynamic imports for loading modules conditionally:</p>
+      <div class="code-snippet">
+        <pre><code>// Dynamic import
+async function loadMath() {
+  const mathModule = await import('./math.js');
+  return mathModule.add(2, 3);
+}
+
+// Conditional loading
+if (someCondition) {
+  import('./heavy-library.js')
+    .then(module => {
+      module.doSomething();
+    });
+}</code></pre>
+      </div>
+      
+      <div class="alert alert-info mt-4">
+        <h6><i class="bi bi-info-circle"></i> Modern JavaScript Features</h6>
+        <p>ES6+ has introduced many powerful features including:</p>
+        <ul class="mb-0">
+          <li><strong>Arrow functions:</strong> <code>const add = (a, b) => a + b;</code></li>
+          <li><strong>Template literals:</strong> <code>Hello ${name}!</code></li>
+          <li><strong>Destructuring:</strong> <code>const {name, age} = person;</code></li>
+          <li><strong>Spread operator:</strong> <code>const newArray = [...oldArray];</code></li>
+          <li><strong>Default parameters:</strong> <code>function greet(name = 'World') {}</code></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="d-flex justify-content-between mt-4">
+      <button class="btn btn-secondary" onclick="prevLanguageTopic('lang-js')">
+        <i class="bi bi-arrow-left"></i> Previous
+      </button>
+      <button class="btn btn-primary" onclick="nextLanguageTopic('lang-js')">
+        Next <i class="bi bi-arrow-right"></i>
+      </button>
+    </div>
+    
+    <div class="mt-4 p-4 rounded-3" style="background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2);">
+      <h5>Quick Reference Links</h5>
+      <div class="d-flex gap-2 flex-wrap">
+        <button class="btn btn-link" onclick="showPage('languages')">
+          <i class="bi bi-arrow-left"></i> Back to Languages
+        </button>
+        <a class="btn btn-outline-success" href="https://www.w3schools.com/js/" target="_blank" rel="noopener">
+          <i class="bi bi-book"></i> W3Schools
+        </a>
+        <a class="btn btn-outline-info" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener">
+          <i class="bi bi-file-earmark-text"></i> MDN Docs
+        </a>
+        <a class="btn btn-outline-warning" href="https://javascript.info/" target="_blank" rel="noopener">
+          <i class="bi bi-mortarboard"></i> JavaScript.info
+        </a>
+        <a class="btn btn-outline-primary" href="https://github.com/topics/javascript" target="_blank" rel="noopener">
+          <i class="bi bi-github"></i> GitHub Projects
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

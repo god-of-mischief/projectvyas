@@ -66,9 +66,9 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-6 hero-content">
-              <h1 class="hero-title">Master Modern web Development</h1>
+              <h1 class="hero-title">Master Modern Web Development</h1>
               <p class="hero-subtitle">Join thousands of developers learning through structured paths, interactive tutorials, and real-world projects..</p>
-              <div class="d-flex gap-3 flex-wrap">
+              <div class="d-flex gap-3 flex-wrap mb-4">
                 <button class="btn btn-primary-custom" onclick="showPage('paths')">
                   <i class="bi bi-rocket-takeoff me-2"></i>Start Learning
                 </button>
@@ -76,17 +76,67 @@
                   <i class="bi bi-code-slash me-2"></i>Browse Languages
                 </button>
               </div>
-              <div class="mt-4">
-                <small class="text-muted">
-                  <i class="bi bi-check-circle-fill text-success me-2"></i>Free Forever
-                  <i class="bi bi-check-circle-fill text-success ms-3 me-2"></i>No Credit Card Required
-                  <i class="bi bi-check-circle-fill text-success ms-3 me-2"></i>Learn at Your Pace
-                </small>
+              <div class="feature-highlights">
+                <div class="d-flex align-items-center gap-4 flex-wrap">
+                  <small class="text-success fw-semibold">
+                    <i class="bi bi-check-circle-fill me-1"></i>Free Forever
+                  </small>
+                  <small class="text-success fw-semibold">
+                    <i class="bi bi-check-circle-fill me-1"></i>Interactive Coding
+                  </small>
+                  <small class="text-success fw-semibold">
+                    <i class="bi bi-check-circle-fill me-1"></i>Multi-Language Support
+                  </small>
+                </div>
               </div>
             </div>
-            <div class="col-lg-6">
+            <!-- <div class="col-lg-6">
               <div class="position-relative">
                 <img src="https://placehold.co/600x400/6366f1/ffffff/?text=Learn+to+Code" alt="Learning Illustration" class="img-fluid rounded-3 shadow-lg">
+              </div>
+            </div> -->
+            <div class="col-lg-6">
+              <div class="position-relative hero-image-container">
+                <div class="coding-preview">
+                  <div class="window-header">
+                    <div class="window-controls">
+                      <span class="dot red"></span>
+                      <span class="dot yellow"></span>
+                      <span class="dot green"></span>
+                    </div>
+                    <span class="window-title">code.js</span>
+                  </div>
+                  <div class="code-content">
+                    <div class="code-line">
+                      <span class="line-number">1</span>
+                      <span class="code-text">
+                        <span class="keyword">function</span> 
+                        <span class="function-name">greet</span>(<span class="parameter">name</span>) {
+                      </span>
+                    </div>
+                    <div class="code-line">
+                      <span class="line-number">2</span>
+                      <span class="code-text">
+                        &nbsp;&nbsp;<span class="keyword">return</span> 
+                        <span class="template-literal">Hello, ${<span class="parameter">name</span>}!</span>;
+                      </span>
+                    </div>
+                    <div class="code-line">
+                      <span class="line-number">3</span>
+                      <span class="code-text">}</span>
+                    </div>
+                    <div class="code-line">
+                      <span class="line-number">4</span>
+                      <span class="code-text"></span>
+                    </div>
+                    <div class="code-line typing-animation">
+                      <span class="line-number">5</span>
+                      <span class="code-text">
+                        <span class="function-name">console</span>.<span class="method">log</span>(<span class="function-name">greet</span>(<span class="string">"Developer"</span>));
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -100,26 +150,42 @@
           <div class="row g-4">
             <div class="col-md-3">
               <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="bi bi-person-fill"></i>
+                </div>
                 <div class="stat-number">50000+</div>
                 <div class="stat-label">Active Learners</div>
+                <div class="stat-growth">+15% this month</div>
               </div>
             </div>
             <div class="col-md-3">
               <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="bi bi-book-half"></i>
+                </div>
                 <div class="stat-number">200+</div>
-                <div class="stat-label">Tutorials</div>
+                <div class="stat-label">Interactive Tutorials</div>
+                <div class="stat-growth">+25% added rececntly</div>
               </div>
             </div>
             <div class="col-md-3">
               <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="bi bi-diagram-3"></i>
+                </div>
                 <div class="stat-number">15+</div>
                 <div class="stat-label">Learning Paths</div>
+                <div class="stat-growth">Beginner to Advanced</div>
               </div>
             </div>
             <div class="col-md-3">
               <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="bi bi-trophy-fill"></i>
+                </div>
                 <div class="stat-number">95%</div>
                 <div class="stat-label">Success Rate</div>
+                <div class="stat-growth">Job placement rate</div>
               </div>
             </div>
           </div>
@@ -129,33 +195,51 @@
       <!-- Features Section -->
 
       <div class="container py-5">
-        <h2 class="text-center mb-5">Why Choose Project Vyas?</h2>
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold">Why Choose Project Vyas?</h2>
+          <p class="lead text-muted">Experience learning that adapts to your pace and goals</p>
+        </div>
         <div class="row g-4">
           <div class="col-md-4">
-            <div class="feature-card">
+            <div class="feature-card enhanced">
               <div class="feature-icon">
                 <i class="bi bi-diagram-3"></i>
               </div>
               <h4>Structured Learning</h4>
-              <p>Follow carefully crafted paths from beginner to advanced levels with clear milestones.</p>
+              <p>Follow carefully crafted roadmaps from beginner to expert levels with clear milestones and progress tracking.</p>
+              <ul class="feature-benefits">
+                <li>Step-by-step guidance</li>
+                <li>Skill assessments</li>
+                <li>Progress tracking</li>
+              </ul>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="feature-card">
+            <div class="feature-card enhanced">
               <div class="feature-icon">
                 <i class="bi bi-code-square"></i>
               </div>
               <h4>Hands-on practice</h4>
-              <p>Build real projects and solve coding challenges to reinforce your learning.</p>
+              <p>Practice with our multi-language code editor supporting JavaScript, Python, Java, C++, and more.</p>
+              <ul class="feature-benefits">
+                <li>6+ programming languages</li>
+                <li>Real-time code execution</li>
+                <li>Syntax highlighting</li>
+              </ul>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="feature-card">
+            <div class="feature-card enhanced">
               <div class="feature-icon">
                 <i class="bi bi-people"></i>
               </div>
               <h4>Community Support</h4>
-              <p>Join a vibrant community of learners and mentors to share knowledge and get help.</p>
+              <p>Join a vibrant community of learners, mentors, and industry professionals ready to help you succeed.</p>
+              <ul class="feature-benefits">
+                <li>Peer-to-peer learning</li>
+                <li>Expert mentorship</li>
+                <li>Code reviews</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -164,62 +248,135 @@
       <!-- Learning Paths Preview -->
 
       <div class="container py-5">
-        <h2 class="text-center mb-5">Popular Learning Paths</h2>
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold">Popular Learning Paths</h2>
+          <p class="lead text-muted">Choose your adventure and start building amazing projects</p>
+        </div>
         <div class="row g-4">
           <div class="col-md-6 col-lg-3">
-            <div class="card-custom">
-              <div class="card-icon">
-                <i class="bi bi-globe"></i>
+            <div class="learning-path-card">
+              <div class="card-header">
+                <div class="path-icon">
+                  <i class="bi bi-stack"></i>
+                </div>
+                <div class="difficulty-badge intermediate">Intermediate</div>
               </div>
-              <h5>Full Stack Development</h5>
-              <p class="text-muted small">Master both frontend and backend development</p>
-              <div class="progress-custom">
-                <div class="progress-bar-custom" style="width: 75%;"></div>
+              <div class="card-body">
+                <h5>Full Stack Development</h5>
+                <p class="text-muted">Master both frontend and backend development with modern frameworks</p>
+                <div class="tech-stack">
+                  <span class="tech-badge">React</span>
+                  <span class="tech-badge">Node.js</span>
+                  <span class="tech-badge">MongoDB</span>
+                </div>
+                <div class="progress-section">
+                  <div class="progress-custom">
+                    <div class="progress-bar-custom" style="width: 75%;"></div>
+                  </div>
+                  <small class="text-muted">12 Modules • 120 Hours</small>
+                </div>
               </div>
-              <small class="text-muted">12 Modules • 120 Hours</small>
-              <button class="btn btn-primary-custom btn-sm mt-3" onclick="showPage('paths')">Start Path</button>
+              <div class="card-footer">
+                <button class="btn btn-primary-custom w-100" onclick="showPage('paths')">
+                  Start Learning <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
             </div>
           </div>
+
           <div class="col-md-6 col-lg-3">
-            <div class="card-custom">
-              <div class="card-icon">
-                <i class="bi bi-palette"></i>
+            <div class="learning-path-card">
+              <div class="card-header">
+                <div class="path-icon">
+                  <i class="bi bi-palette"></i>
+                </div>
+                <div class="difficulty-badge beginner">Beginner</div>
               </div>
-              <h5>Frontend Development</h5>
-              <p class="text-muted small">Create beautiful, responsive user interfaces</p>
-              <div class="progress-custom">
-                <div class="progress-bar-custom" style="width: 60%;"></div>
+              <div class="card-body">
+                <h5>Frontend Development</h5>
+                <p class="text-muted">Learn to build stunning user interfaces with modern frontend technologies</p>
+                <div class="tech-stack">
+                  <span class="tech-badge">HTML</span>
+                  <span class="tech-badge">CSS</span>
+                  <span class="tech-badge">JavaScript</span>
+                </div>
+                <div class="progress-section">
+                  <div class="progress-custom">
+                    <div class="progress-bar-custom" style="width: 60%;"></div>
+                  </div>
+                  <small class="text-muted">8 Modules • 80 Hours</small>
+                </div>
               </div>
-              <small class="text-muted">8 Modules • 80 Hours</small>
-              <button class="btn btn-primary-custom btn-sm mt-3" onclick="showPage('paths')">Start Path</button>
+              <div class="card-footer">
+                <button class="btn btn-primary-custom w-100" onclick="showPage('paths')">
+                  Start Learning <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>  
             </div>
           </div>
+
           <div class="col-md-6 col-lg-3">
-            <div class="card-custom">
-              <div class="card-icon">
-                <i class="bi bi-server"></i>
+            <div class="learning-path-card">
+              <div class="card-header">
+                <div class="path-icon">
+                  <i class="bi bi-server"></i>
+                </div>
+                <div class="difficulty-badge intermediate">Intermediate</div>
               </div>
-              <h5>Backend Development</h5>
-              <p class="text-muted small">Build robust APIs and server applications</p>
-              <div class="progress-custom">
-                <div class="progress-bar-custom" style="width: 45%;"></div>
+              <div class="card-body">
+                <h5>Backend Development</h5>
+                <p class="text-muted">Build robust APIs and server applications</p>
+                <div class="tech-stack">
+                  <span class="tech-badge">Node.js</span>
+                  <span class="tech-badge">Express</span>
+                  <span class="tech-badge">SQL</span>
+                </div>
+                <div class="progress-section">
+                  <div class="progress-custom">
+                    <div class="progress-bar-custom" style="width: 45%;"></div>
+                  </div>
+                  <small class="text-muted">10 Modules • 100 Hours</small>
+                </div>
               </div>
-              <small class="text-muted">10 Modules • 100 Hours</small>
-              <button class="btn btn-primary-custom btn-sm mt-3" onclick="showPage('paths')">Start Path</button>
+              <div class="card-footer">
+                <button class="btn btn-primary-custom w-100" onclick="showPage('paths')">
+                  Start Learning <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
             </div>
           </div>
+
           <div class="col-md-6 col-lg-3">
-            <div class="card-custom">
-              <div class="card-icon">
-                <i class="bi bi-robot"></i>
+            <div class="learning-path-card popular">
+              <div class="popular-badge">
+                <i class="bi bi-fire"></i>Popular
               </div>
-              <h5>AI/ML Development</h5>
-              <p class="text-muted small">Dive into artificial intelligence and machine learning</p>
-              <div class="progress-custom">
-                <div class="progress-bar-custom" style="width: 30%;"></div>
+              <div class="card-header">
+                <div class="path-icon">
+                  <i class="bi bi-robot"></i>
+                </div>
+                <div class="difficulty-badge advanced">Advanced</div>
               </div>
-              <small class="text-muted">15 Modules • 150 Hours</small>
-              <button class="btn btn-primary-custom btn-sm mt-3" onclick="showPage('paths')">Start Path</button>
+              <div class="card-body">
+                <h5>AI/ML Development</h5>
+                <p class="text-muted">Dive into artificial intelligence and machine learning</p>
+                <div class="tech-stack">
+                  <span class="tech-badge">Python</span>
+                  <span class="tech-badge">TensorFlow</span>
+                  <span class="tech-badge">PyTorch</span>
+                </div>
+                <div class="progress-section">
+                  <div class="progress-custom">
+                    <div class="progress-bar-custom" style="width: 30%;"></div>
+                  </div>
+                  <small class="text-muted">15 Modules • 150 Hours</small>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-primary-custom w-100" onclick="showPage('paths')">
+                  Start Learning <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -228,40 +385,79 @@
       <!-- Testimonials -->
       
       <div class="container py-5">
-        <h2 class="text-center mb-5">What Our Students Say</h2>
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold">Success Stories</h2>
+          <p class="lead text-muted">Hear from our successful learners</p>
+        </div>
         <div class="row g-4">
           <div class="col-md-4">
-            <div class="testimonial-card">
-              <p class="testimonial-text">"Project Vyas transformed my career. The structured approach and hands-on projects helped me land my dream job!"</p>
+            <div class="testimonial-card enhanced">
+              <div class="testimonial-rating">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <blockquote class="testimonial-text">"Project Vyas transformed my approach to coding. The structured approach and 
+                hands-on projects helped me land my dream job!"
+              </blockquote>
               <div class="testimonial-author">
-                <div class="testimonial-avatar"></div>
-                <div>
+                <div class="author-avatar">
+                  <img src="https://placehold.co/50x50/6366f1/ffffff/?text=SC" alt="Sarah Chen" class="rounded-circle">
+                </div>
+                <div class="author-info">
                   <strong>Sarah Chen</strong>
-                  <div class="small text-muted">Full Stack Developer</div>
+                  <div class="author-role">Full Stack Developer at Google</div>
+                  <div class="author-location">San Francisco, CA</div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="testimonial-card">
-              <p class="testimonial-text">"The community support is amazing. Whenever I'm stuck, there's always someone ready to help."</p>
+            <div class="testimonial-card enhanced">
+              <div class="testimonial-rating">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <blockquote class="testimonial-text">"The Community Support is phenomenal. I always found help when I was stuck, and 
+                the mentors are top-notch!"
+              </blockquote>
               <div class="testimonial-author">
-                <div class="testimonial-avatar"></div>
-                <div>
+                <div class="author-avatar">
+                  <img src="https://placehold.co/50x50/8b5cf6/ffffff/?text=RP" alt="Raj Patel" class="rounded-circle">
+                </div>
+                <div class="author-info">
                   <strong>Raj Patel</strong>
-                  <div class="small text-muted">Frontend Developer</div>
+                  <div class="author-role">Frontend Developer at Microsoft</div>
+                  <div class="author-location">Seattle, WA</div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="testimonial-card">
-              <p class="testimonial-text">"Best learning platform I've used. The projects are real-world and the content is always up-to-date."</p>
+            <div class="testimonial-card enhanced">
+              <div class="testimonial-rating">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <blockquote class="testimonial-text">"Best learning platform out there! The interactive coding environment made 
+                learning fun and effective."
+              </blockquote>
               <div class="testimonial-author">
-                <div class="testimonial-avatar"></div>
-                <div>
+                <div class="author-avatar">
+                  <img src="https://placehold.co/50x50/ec4899/ffffff/?text=MJ" alt="Mike Johnson" class="rounded-circle">
+                </div>
+                <div class="author-info">
                   <strong>Mike Johnson</strong>
-                  <div class="small text-muted">Software Engineer</div>
+                  <div class="author-role">Software Engineer at Meta</div>
+                  <div class="author-location">New York, NY</div>
                 </div>
               </div>
             </div>
@@ -272,12 +468,216 @@
       <!-- CTA Section -->
        
       <div class="container py-5">
-        <div class="text-center p-5 rounded-3" style="background: var(--gradient-primary);">
-          <h2 class="text-white mb-3">Ready to Start Your Journey?</h2>
-          <p class="text-white mb-4">Join thousands of developers who are already learning with Project Vyas</p>
-          <button class="btn btn-light btn-lg" onclick="showPage('paths')">Get Started Free</button>
+        <div class="cta-section">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <h2 class="cta-title">Ready to Start Your Coding Journey?</h2>
+              <p class="cta-subtitle">Join thousands of developers who are already transforming their careers with Project Vyas
+                Start learning today with our interactive tutorials and real-world projects.</p>
+              <div class="cta-features">
+                <div class="feature-item">
+                  <i class="bi bi-check2-circle"></i>
+                  <span>Interactive multi-language code editor</span>
+                </div>
+                <div class="feature-item">
+                  <i class="bi bi-check2-circle"></i>
+                  <span>Structured learning paths for all levels</span>
+                </div>
+                <div class="feature-item">
+                  <i class="bi bi-check2-circle"></i>
+                  <span>Vibrant community support</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 text-center">
+              <button class="btn btn-cta-primary btn-lg mb-3" onclick="showPage('paths')">
+                <i class="bi bi-rocket-takeoff me-2"></i>
+                Get Started Free
+              </button>
+              <div class="cta-guarantee">
+                <small class="text-muted d-block">
+                  <i class="bi bi-shield-check me-1"></i>
+                  100% Free • No credit card required
+                </small>
+                <small class="text-muted d-block mt-1">
+                  <i class="bi bi-people me-1"></i>
+                  Join 50,000+ learners
+                </small>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+      
+      <!--New: Featured Technologies Section-->
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold">Technologies You'll Master</h2>
+          <p class="lead text-muted">Stay ahead with tutorials on the latest and most in-demand technologies</p>
+        </div>
+        <div class="tech-showcase">
+          <div class="tech-category">
+            <h5>Frontend</h5>
+            <div class="tech-items">
+              <div class="tech-item" onclick="navigateToLanguage('lang-html')">
+                <i class="bi bi-filetype-html"></i>
+                <span>HTML5</span>
+              </div>
+              <div class="tech-item" onclick="navigateToLanguage('lang-css')">
+                <i class="bi bi-filetype-css"></i>
+                <span>CSS3</span>
+              </div>
+              <div class="tech-item" onclick="navigateToLanguage('lang-js')">
+                <i class="bi bi-filetype-js"></i>
+                <span>JavaScript</span>
+              </div>
+              <div class="tech-item" onclick="navigateToLanguage('lang-react')">
+                <i class="bi bi-bootstrap"></i>
+                <span>React</span>
+              </div>
+            </div>
+          </div>
+          <div class="tech-category">
+            <h5>Backend</h5>
+            <div class="tech-items">
+              <div class="tech-item" onclick="navigateToLanguage('lang-node')">
+                <i class="bi bi-server"></i>
+                <span>Node.js</span>
+              </div>
+              <div class="tech-item" onclick="navigateToLanguage('lang-python')">
+                <i class="bi bi-filetype-py"></i>
+                <span>Python</span>
+              </div>
+              <div class="tech-item" onclick="navigateToLanguage('lang-java')">
+                <i class="bi bi-filetype-java"></i>
+                <span>Java</span>
+              </div>
+              <div class="tech-item" onclick="navigateToLanguage('lang-mongodb')">
+                <i class="bi bi-database"></i>
+                <span>MongoDB</span>
+              </div>
+            </div>
+          </div>
+          <div class="tech-category">
+            <h5>Tools & More</h5>
+            <div class="tech-items">
+              <div class="tech-item" onclick="navigateToLanguage('tech-git')">
+                <i class="bi bi-git"></i>
+                <span>Git</span>
+              </div>
+              <div class="tech-item" onclick="navigateToLanguage('lang-typescript')">
+                <i class="bi bi-code-slash"></i>
+                <span>TypeScript</span>
+              </div>
+              <div class="tech-item" onclick="navigateToLanguage('lang-docker')">
+                <i class="bi bi-box"></i>
+                <span>Docker</span>
+              </div>
+              <div class="tech-item" onclick="navigateToLanguage('lang-aws')">
+                <i class="bi bi-cloud"></i>
+                <span>AWS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- New: Quick Start Demo -->
+      <div class="container py-5">
+        <div class="demo-section">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <h2 class="mb-4">Try Our Interactive Editor</h2>
+              <p class="lead mb-4">Experience our multi-language code editor right here. 
+                Choose a language and start coding instantly!
+              </p>
+              <div class="demo-playground">
+                <div class="editor-header">
+                  <h6 class="editor-title">Quick Demo Editor</h6>
+                  <div class="language-selector">
+                    <select id="demo-language" onchange="changeEditorLanguage('demo-editor', this.value)">
+                      <option value="javascript">JavaScript</option>
+                      <option value="python">Python</option>
+                      <option value="java">Java</option>
+                      <option value="cpp">C++</option>
+                    </select>
+                  </div>
+                </div>
+                <div id="demo-editor" class="editor small-editor"></div>
+                <div class="demo-controls">
+                  <button class="btn btn-primary btn-sm run-button" onclick="runCode('demo-editor','demo-input','demo-output')">
+                    <i class="bi bi-play-fill"></i>Run
+                  </button>
+                  <span class="demo-hint">Click "Run" to see the magic!</span>
+                </div>
+                <textarea id="demo-input" style="display:none;"></textarea>
+                <div id="demo-output" class="output small-output">Click "Run" to see the output!</div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="demo-benefits">
+                <h5>Why Everyone Loves Our Editors:</h5>
+                <div class="benefit-item">
+                  <i class="bi bi-lightning-charge-fill"></i>
+                  <div>
+                    <strong>Instant Execution</strong>
+                    <p>Run code immediately without any setup</p>
+                  </div>
+                </div>
+                <div class="benefit-item">
+                  <i class="bi bi-palette-fill"></i>
+                  <div>
+                    <strong>Syntax highlighting</strong>
+                    <p>Beautiful code formatting for better readability</p>
+                  </div>
+                </div>
+                <div class="benefit-item">
+                  <i class="bi bi-globe"></i>
+                  <div>
+                    <strong>Multi-Language Support</strong>
+                    <p>JavaScript, Python, Java, C++</p>
+                  </div>
+                </div>
+                <div class="benefit-item">
+                  <i class="bi bi-moon-stars-fill"></i>
+                  <div>
+                    <strong>Theme Support</strong>
+                    <p>Light and Dark themes for comfortable coding</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NewsLetter Signup -->
+      <div class="container py-5">
+        <div class="newsletter-section">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+              <div class="newsletter-content">
+                <i class="bi bi-envelope-heart newsletter-icon"></i>
+                <h3>Stay updated</h3>
+                <p>Get the latest tutorials, coding tips, and platform updates delivered to your inbox.</p>
+                <form action="" class="newsletter-form">
+                  <div class="input-group">
+                    <input type="email" class="form-control" placeholder="Enter your email" required>
+                    <button class="btn btn-primary-custom" type="submit">
+                      Subscribe <i class="bi bi-arrow-right"></i>
+                    </button>
+                  </div>
+                </form>
+                <small class="text-muted mt-2 d-block">
+                  No spam, unsubscribe anytime.
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
 
     <!-- Language sections --> 
