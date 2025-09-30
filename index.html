@@ -12,19 +12,35 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css"> 
+
   <link rel="stylesheet" href="css/styles.css">
 
 </head>
 <body data-theme="light">
+  <!-- Top-progress Bar -->
+  <div class="Top-progress-bar">
+    <div class="Top-progress-fill" id="topProgressBar"></div>
+  </div>
 
   <!-- Enhanced Navbar -->
 
   <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-    <div class="container">
+    <div class="container-fluid">
       <a class="navbar-brand" href="#home" onclick="showPage('home')">
         <img src="images/jedi-order-brands.svg" alt="Logo" width="28" height="28" class="me-2 align-text-top">
         Project Vyas
       </a>
+
+      <!--Search Bar-->
+      <div class="search-container mx-auto d-none d-lg-block">
+        <input type="text" class="search-input" placeholder="Search lessons..." id="searchInput">
+        <i class="bi bi-search search-icon"></i>
+      </div>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -34,19 +50,39 @@
             <a class="nav-link active" aria-current="page" href="#home" onclick="showPage('home')">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#paths" onclick="showPage('paths')">Learning Paths</a>
+            <a class="nav-link" href="#paths" onclick="showPage('paths')">Paths</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#languages" onclick="showPage('languages')">Languages</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#techuni" onclick="showPage('techuni')">TheTechStackUniverse</a>
+            <a class="nav-link" href="#techuni" onclick="showPage('techuni')">TechUniverse</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#resources" onclick="showPage('resources')">Resources</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#community" onclick="showPage('community')">Community</a>
+          </li>
+          <li class="nav-item">
+            <div class="user-profile" id="userprofile" style="display: none;">
+              <div class="user-avatar" id="userAvatar">JD</div>
+              <div class="dropdown">
+                <button class="btn btn-link dropdown-toggle" type="button" data-bs-target="dropdown">
+                  <span id="userName">John Doe</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#profile">Profile</a></li>
+                  <li><a class="dropdown-item" href="#progress">My Progress</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" onclick="logout()">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item" id="authButtons">
+            <button class="btn btn-outline-primary btn-sm me-2" onclick="showPage('login')">Login</button>
+            <button class="btn btn-primary btn-sm" onclick="showPage('signup')">Sign Up</button>
           </li>
         </ul>
       </div>
@@ -677,9 +713,77 @@
           </div>
         </div>
       </div>
-
     </section>
 
+    <section id="login" class="page">
+      <div class="auth-container">
+        <div class="auth-card">
+          <div class="auth-header">
+            <h2 class="auth-title">Welcome Back</h2>
+            <p class="text-muted">Sign in to continue your learning journey</p>
+          </div>
+          <form action="" id="loginForm">
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="loginEmail" placeholder="name@example.com" required>
+              <label for="loginEmail">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
+              <label for="loginPassword">Password</label>
+            </div>
+            <div class="form-check mb-3">
+              <input type="checkbox" class="form-check-input" id="rememberMe">
+              <label class="form-check-label" for="rememberMe">rememberMe</label>
+            </div>
+            <button type="submit" class="btn btn-primary-custom w-100 mb-3">Sign In</button>
+            <p class="text-center text-muted">
+              Don't have an account? <a href="#signup" onclick="showPage('signup')">Sign Up</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signup Page-->
+    <section id="signup" class="page">
+      <div class="auth-container">
+        <div class="auth-card">
+          <div class="auth-header">
+            <h2 class="auth-title">Create Account</h2>
+            <p class="text-muted">Start your coding journey today</p>
+          </div>
+          <form action="" id="signupForm">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="signupName" placeholder="John Doe" required>
+              <label for="signupName">Full Name</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="signupEmail" placeholder="name@example.com" required>
+              <label for="signupEmail">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="signupPassword" placeholder="Password" required minlength="6">
+              <label for="signupPassowrd">Password</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required>
+              <label for="confirmPassword">confirmPassword</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+              <label class="form-check-label" for="agreeTerms">
+                I agree to the <a href="#">Terms and Conditions</a>
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary-custom w-100 mb-3">Create Account</button>
+            <p class="text-center text-muted">
+              already have an account? <a href="#login" onclick="showPage('login')">Sign in</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  
     <!-- Language sections --> 
     <section id="lang-html" class="page" data-src="pages/languages/html.html">
       <div class="container py-4 dynamic-content"></div>
@@ -730,6 +834,9 @@
               </div>
               <h5>HTML</h5>
               <p class="small text-muted">Structure web pages</p>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 0%;"></div>
+              </div>
               <button class="btn btn-outline-primary btn-sm w-100" onclick="navigateToLanguage('lang-html')">Learn</button>
             </div>
           </div>
@@ -741,6 +848,9 @@
               </div>
               <h5>CSS</h5>
               <p class="small text-muted">Style and layout</p>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 0%;"></div>
+              </div>
               <button class="btn btn-outline-primary btn-sm w-100" onclick="navigateToLanguage('lang-css')">Learn</button>
             </div>
           </div>
@@ -752,6 +862,9 @@
               </div>
               <h5>JavaScript</h5>
               <p class="small text-muted">Interactive web apps</p>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 0%;"></div>
+              </div>
               <button class="btn btn-outline-primary btn-sm w-100" onclick="navigateToLanguage('lang-js')">Learn</button>
             </div>
           </div>
@@ -763,6 +876,9 @@
               </div>
               <h5>Python</h5>
               <p class="small text-muted">Versatile programming</p>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 0%;"></div>
+              </div>
               <button class="btn btn-outline-primary btn-sm w-100" onclick="navigateToLanguage('lang-python')">Learn</button>
             </div>
           </div>
@@ -774,6 +890,9 @@
               </div>
               <h5>Java</h5>
               <p class="small text-muted">Enterprise applications</p>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 0%;"></div>
+              </div>
               <button class="btn btn-outline-primary btn-sm w-100" onclick="navigateToLanguage('lang-java')">Learn</button>
             </div>
           </div>
@@ -785,6 +904,9 @@
               </div>
               <h5>Node.js</h5>
               <p class="small text-muted">Server-side JavaScript</p>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 0%;"></div>
+              </div>
               <button class="btn btn-outline-primary btn-sm w-100" onclick="navigateToLanguage('lang-node')">Learn</button>
             </div>
           </div>
@@ -796,6 +918,9 @@
               </div>
               <h5>SQL</h5>
               <p class="small text-muted">Database queries</p>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 0%;"></div>
+              </div>
               <button class="btn btn-outline-primary btn-sm w-100" onclick="navigateToLanguage('lang-sql')">Learn</button>
             </div>
           </div>
@@ -807,6 +932,9 @@
               </div>
               <h5>TypeScript</h5>
               <p class="small text-muted">Type-safe JavaScript</p>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 0%;"></div>
+              </div>
               <button class="btn btn-outline-primary btn-sm w-100" onclick="navigateToLanguage('lang-typescript')">Learn</button>
             </div>
           </div>
@@ -818,6 +946,9 @@
               </div>
               <h5>JSSample</h5>
               <p class="small text-muted">SampleJavaScript</p>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 0%;"></div>
+              </div>
               <button class="btn btn-outline-primary btn-sm w-100" onclick="navigateToLanguage('lang-jssample')">Learn</button>
             </div>
           </div>
@@ -846,6 +977,9 @@
                 <li>MongoDB & PostgreSQL</li>
                 <li>Docker & Cloud Deployment</li>
               </ul>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 0%;"></div>
+              </div>
               <button class="btn btn-primary-custom w-100 mt-3" onclick="navigateToPath('path-fullstack')">Start Learning</button>
             </div>
           </div>
@@ -862,6 +996,9 @@
                 <li>React, Vue, or Angular</li>
                 <li>Performance Optimization</li>
               </ul>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 0%;"></div>
+              </div>
               <button class="btn btn-primary-custom w-100 mt-3" onclick="navigateToPath('path-frontend')">Start Learning</button>
             </div>
           </div>
@@ -879,6 +1016,9 @@
                 <li>Authentication & Security</li>
                 <li>Microservices</li>
               </ul>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 0%;"></div>
+              </div>
               <button class="btn btn-primary-custom w-100 mt-3" onclick="navigateToPath('path-backend')">Start Learning</button>
             </div>
           </div>
@@ -896,6 +1036,9 @@
                 <li>MongoDB & PostgreSQL</li>
                 <li>Docker & Cloud Deployment</li>
               </ul>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 0%;"></div>
+              </div>
               <button class="btn btn-primary-custom w-100 mt-3" onclick="navigateToPath('path-fullstackmernnsu')">Start Learning</button>
             </div>
           </div>
@@ -913,6 +1056,9 @@
                 <li>Machine Learning Models</li>
                 <li>Deep Learning & Neural Networks</li>
               </ul>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 0%;"></div>
+              </div>
               <button class="btn btn-primary-custom w-100 mt-3" onclick="navigateToPath('path-aiml')">Start Learning</button>
             </div>
           </div>
@@ -930,6 +1076,9 @@
                 <li>iOS & Android</li>
                 <li>App Store Deployment</li>
               </ul>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 0%;"></div>
+              </div>
               <button class="btn btn-primary-custom w-100 mt-3" onclick="navigateToPath('path-mobile')">Start Learning</button>
             </div>
           </div>
@@ -947,6 +1096,9 @@
                 <li>AWS, Azure, GCP</li>
                 <li>Monitoring & Security</li>
               </ul>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 0%;"></div>
+              </div>
               <button class="btn btn-primary-custom w-100 mt-3" onclick="navigateToPath('path-devops')">Start Learning</button>
             </div>
           </div>
@@ -1022,6 +1174,9 @@
               </div>
               <h4>Cyber Security</h4>
               <p class="text-muted">Learn about web security, ethical hacking, and protection strategies</p>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 0%;"></div>
+              </div>
               <button class="btn btn-primary-custom w-100" onclick="navigateToTech('tech-CybSe')">Explore</button>
             </div>
           </div>
@@ -1033,6 +1188,9 @@
               </div>
               <h4>DSA</h4>
               <p class="text-muted">Master problem-solving and optimize your code</p>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 0%;"></div>
+              </div>
               <button class="btn btn-primary-custom w-100" onclick="navigateToTech('tech-DSA')">Explore</button>
             </div>
           </div>
@@ -1044,6 +1202,9 @@
               </div>
               <h4>Interview Preparation</h4>
               <p class="text-muted">Ace your technical interviews with curated questions</p>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 0%;"></div>
+              </div>
               <button class="btn btn-primary-custom w-100" onclick="navigateToTech('tech-interview')">Explore</button>
             </div>
           </div>
@@ -1055,6 +1216,9 @@
               </div>
               <h4>Code Snippets</h4>
               <p class="text-muted">Ready-to-use code snippets for common problems</p>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 0%;"></div>
+              </div>
               <button class="btn btn-primary-custom w-100" onclick="navigateToTech('tech-snippets')">Explore</button>
             </div>
           </div>
@@ -1066,6 +1230,9 @@
               </div>
               <h4>Mathematics for CS</h4>
               <p class="text-muted">Essential math concepts for computer science</p>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 0%;"></div>
+              </div>
               <button class="btn btn-primary-custom w-100" onclick="navigateToTech('tech-maths')">Explore</button>
             </div>
           </div>
@@ -1077,6 +1244,9 @@
               </div>
               <h4>Version Control</h4>
               <p class="text-muted">Master Git, GitHub, and collaboration workflows</p>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 0%;"></div>
+              </div>
               <button class="btn btn-primary-custom w-100" onclick="navigateToTech('tech-git')">Explore</button>
             </div>
           </div>
@@ -1189,11 +1359,17 @@
     <i class="bi bi-moon-fill" id="theme-icon"></i>
   </button>
 
-
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
 
   <script src="js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <!-- CodeMirror for code editor -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/javascript/javascript.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs/loader.min.js"></script>
 </body>
 </html>
