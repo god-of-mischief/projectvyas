@@ -49,6 +49,10 @@ body {
   line-height: 1.6;
 }
 
+[data-theme="dark"] body{
+  color: #e2e8f0;
+}
+
 /*Top Progress Bar*/
 .top-progress-bar {
   position: fixed;
@@ -2372,5 +2376,106 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* Dark Mode Text Visibility Fixes */
+[data-theme="dark"] body {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] p,
+[data-theme="dark"] li,
+[data-theme="dark"] label {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .text-muted {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .lead {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .list-group-item {
+  background: #1e293b;
+  border-color: #334155;
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .list-group-item:hover {
+  background: #334155;
+}
+  
+[data-theme="dark"] .list-group-item.active {
+  background: var(--vyas-primary);
+  border-color: var(--vyas-primary);
+}
+
+/* Topics Sidebar Mobile */
+@media (max-width: 991px) {
+  .topics-sidebar-collapsible {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 1000;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+  }
+  
+  [data-theme="dark"] .topics-sidebar-collapsible {
+    background: #1e293b;
+  }
+  
+  .topics-sidebar-collapsible.show {
+    display: block;
+  }
+} 
+
+/* Editor Container */
+[id^="editor"] {
+  border: 1px solid var(--vyas-border);
+  border-radius: 0.5rem;
+}
+
+[data-theme="dark"] [id^="editor"] {
+  border-color: #334155;
+}
+
+/* Toast Animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
   }
 }
